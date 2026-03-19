@@ -1348,7 +1348,128 @@ img {
   color: var(--color-text-secondary);
 }
 
-/* Tinglysning mortgage cards */
+/* Owner & Loan section */
+.tl-section {
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin: 24px 0;
+  box-shadow: var(--shadow-md);
+}
+
+.tl-section h2 {
+  font-size: 1.15rem;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.tl-section .tl-subtitle {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 18px;
+}
+
+.tl-owner-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tl-owner-card {
+  flex: 1 1 220px;
+  background: #f6f7f9;
+  border: 1px solid #e8e8ed;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.tl-owner-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.tl-owner-share {
+  font-size: 0.78rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.tl-owner-socials {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tl-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.tl-social-link:hover {
+  opacity: 0.8;
+}
+
+.tl-social-link.linkedin {
+  background: #e8f0fe;
+  color: #0a66c2;
+}
+
+.tl-social-link.facebook {
+  background: #e7f0ff;
+  color: #1877f2;
+}
+
+.tl-divider {
+  border: none;
+  border-top: 1px solid #eaeaea;
+  margin: 18px 0;
+}
+
+.tl-sub-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.tl-val-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin-bottom: 4px;
+}
+
+.tl-val-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.tl-val-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.tl-val-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
 .tl-mortgages {
   display: flex;
   flex-direction: column;
@@ -1356,39 +1477,60 @@ img {
 }
 
 .tl-mortgage-card {
-  background: #f8f9fb;
+  background: #f6f7f9;
   border: 1px solid #e8e8ed;
   border-radius: 8px;
   padding: 12px 14px;
 }
 
 .tl-mortgage-type {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: #1a1a2e;
   margin-bottom: 4px;
 }
 
 .tl-mortgage-details {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
-  font-size: 0.8rem;
-  color: var(--color-text-secondary);
+  gap: 4px 14px;
+  font-size: 0.82rem;
 }
 
 .tl-mortgage-amount {
-  font-weight: 600;
-  color: var(--color-accent);
+  font-weight: 700;
+  color: #1a1a2e;
 }
 
 .tl-mortgage-rate {
-  color: var(--color-text-muted);
+  color: #666;
 }
 
 .tl-mortgage-creditor {
-  color: var(--color-text-secondary);
+  color: #888;
   font-style: italic;
+}
+
+.tl-total-debt {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: #f0f4f8;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #1a1a2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tl-total-debt strong {
+  font-weight: 600;
+}
+
+.tl-total-debt .tl-debt-amount {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1a1a2e;
 }
 
 @media (max-width: 480px) {
