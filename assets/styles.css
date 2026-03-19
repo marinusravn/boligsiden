@@ -685,15 +685,6 @@ img {
   line-height: 1;
 }
 
-.card-luxury {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #9b59b6;
-  padding: 1px 6px;
-  background: #f3e8fa;
-  border-radius: 4px;
-}
-
 .card-rating-link {
   font-size: 0.68rem;
   color: var(--color-primary);

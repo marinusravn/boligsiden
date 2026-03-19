@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kort — BoligGram</title>
+  <title>Map — BoligGram</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
@@ -179,35 +179,36 @@
         BoligGram
       </a>
       <nav class="site-nav">
-        <a href="index.html">Forside</a>
-        <a href="listings.html">Boliger</a>
-        <a href="map.html" class="active">Kort</a>
-        <a href="subscribe.html">Abonner</a>
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="map.html" class="active">Map</a>
+        <a href="add.html">Add Listing</a>
+        <a href="subscribe.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <div class="map-wrapper">
     <div class="map-toolbar">
-      <label for="map-filter-brokerage">Mægler:</label>
+      <label for="map-filter-brokerage">Broker:</label>
       <select id="map-filter-brokerage">
-        <option value="">Alle</option>
+        <option value="">All</option>
       </select>
-      <label for="map-filter-neighborhood">Område:</label>
+      <label for="map-filter-neighborhood">Area:</label>
       <select id="map-filter-neighborhood">
-        <option value="">Alle</option>
+        <option value="">All</option>
       </select>
-      <label for="map-filter-rooms">Rum:</label>
+      <label for="map-filter-rooms">Rooms:</label>
       <select id="map-filter-rooms">
-        <option value="">Alle</option>
+        <option value="">All</option>
       </select>
       <span class="map-count" id="map-count"></span>
     </div>
     <div id="map"></div>
     <div class="map-legend">
-      <h4>Forklaring</h4>
-      <div class="legend-item"><div class="legend-dot exact"></div> Præcis adresse</div>
-      <div class="legend-item"><div class="legend-dot approx"></div> Omtrentlig placering</div>
+      <h4>Legend</h4>
+      <div class="legend-item"><div class="legend-dot exact"></div> Exact address</div>
+      <div class="legend-item"><div class="legend-dot approx"></div> Approximate location</div>
     </div>
   </div>
 
@@ -244,7 +245,7 @@
 
       function formatPrice(p) {
         if (!p) return null;
-        return new Intl.NumberFormat('da-DK').format(p) + ' kr.';
+        return new Intl.NumberFormat('da-DK').format(p) + ' DKK';
       }
 
       function buildPopup(l) {
@@ -256,17 +257,17 @@
         const area = l.approximate_area_sqm || l.area_m2;
 
         return `<div class="map-popup">
-          <div class="map-popup-price${!price ? ' no-price' : ''}">${price || 'Pris ikke oplyst'}</div>
+          <div class="map-popup-price${!price ? ' no-price' : ''}">${price || 'Price not listed'}</div>
           <div class="map-popup-address">${addr}${floor}</div>
           <div class="map-popup-meta">${l.postal_code || ''} ${l.city || ''} — ${l.neighborhood || ''}</div>
           <div class="map-popup-details">
             ${area ? '<span>' + area + ' m²</span>' : ''}
-            ${l.rooms ? '<span>' + l.rooms + ' rum</span>' : ''}
+            ${l.rooms ? '<span>' + l.rooms + ' rooms</span>' : ''}
             ${l.property_type ? '<span>' + App.translatePropertyType(l.property_type) + '</span>' : ''}
           </div>
           <div class="map-popup-broker">${l.brokerage_name || ''}</div>
-          <a href="${detailUrl}" class="map-popup-link">Se detaljer</a>
-          ${isApprox ? '<div class="map-popup-approx">Omtrentlig placering</div>' : ''}
+          <a href="${detailUrl}" class="map-popup-link">View details</a>
+          ${isApprox ? '<div class="map-popup-approx">Approximate location</div>' : ''}
         </div>`;
       }
 
@@ -303,10 +304,9 @@
         }
 
         document.getElementById('map-count').textContent =
-          filtered.length + ' bolig' + (filtered.length !== 1 ? 'er' : '') + ' på kortet';
+          filtered.length + ' listing' + (filtered.length !== 1 ? 's' : '') + ' on the map';
       }
 
-      // Populate filter dropdowns
       const brokerages = [...new Set(App.listings.map(l => l.brokerage_name).filter(Boolean))].sort();
       const neighborhoods = [...new Set(App.listings.map(l => l.neighborhood).filter(Boolean))].sort();
       const rooms = [...new Set(App.listings.map(l => l.rooms).filter(Boolean))].sort((a, b) => a - b);
@@ -318,7 +318,7 @@
       neighborhoods.forEach(n => { const o = document.createElement('option'); o.value = n; o.textContent = n; nSel.appendChild(o); });
 
       const rSel = document.getElementById('map-filter-rooms');
-      rooms.forEach(r => { const o = document.createElement('option'); o.value = r; o.textContent = r + ' rum'; rSel.appendChild(o); });
+      rooms.forEach(r => { const o = document.createElement('option'); o.value = r; o.textContent = r + ' rooms'; rSel.appendChild(o); });
 
       function applyMapFilters() {
         const brokerage = bSel.value;

@@ -13,8 +13,20 @@ const App = {
         ]);
         this.listings = listingsRes;
         this.accounts = accountsRes;
-        this.filtered = [...this.listings];
         this._basePath = base;
+
+        // Merge user-added listings from localStorage
+        const userListings = JSON.parse(localStorage.getItem('bg_user_listings') || '[]');
+        if (userListings.length) {
+          const existingIds = new Set(this.listings.map(l => l.listing_id));
+          for (const ul of userListings) {
+            if (!existingIds.has(ul.listing_id)) {
+              this.listings.push(ul);
+            }
+          }
+        }
+
+        this.filtered = [...this.listings];
         return;
       } catch (e) {
         continue;
@@ -22,20 +34,31 @@ const App = {
     }
     if (window.__LISTINGS__) this.listings = window.__LISTINGS__;
     if (window.__ACCOUNTS__) this.accounts = window.__ACCOUNTS__;
+
+    const userListings = JSON.parse(localStorage.getItem('bg_user_listings') || '[]');
+    if (userListings.length) {
+      const existingIds = new Set(this.listings.map(l => l.listing_id));
+      for (const ul of userListings) {
+        if (!existingIds.has(ul.listing_id)) {
+          this.listings.push(ul);
+        }
+      }
+    }
+
     this.filtered = [...this.listings];
     this._basePath = '';
   },
 
   formatPrice(price) {
     if (!price) return null;
-    return new Intl.NumberFormat('da-DK').format(price) + ' kr.';
+    return new Intl.NumberFormat('da-DK').format(price) + ' DKK';
   },
 
   formatDate(dateStr) {
     if (!dateStr) return null;
     const d = new Date(dateStr);
-    const months = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
-    return `${d.getDate()}. ${months[d.getMonth()]} ${d.getFullYear()}`;
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
   },
 
   getUniqueValues(field) {
@@ -131,7 +154,7 @@ const App = {
 
   getInstagramEmbedHtml(shortcode) {
     if (!shortcode) return '';
-    return `<blockquote class="instagram-media ig-embed-card" data-instgrm-permalink="https://www.instagram.com/p/${shortcode}/" data-instgrm-version="14"><a href="https://www.instagram.com/p/${shortcode}/" target="_blank" rel="noopener">Se opslaget p\u00E5 Instagram</a></blockquote>`;
+    return `<blockquote class="instagram-media ig-embed-card" data-instgrm-permalink="https://www.instagram.com/p/${shortcode}/" data-instgrm-version="14"><a href="https://www.instagram.com/p/${shortcode}/" target="_blank" rel="noopener">View post on Instagram</a></blockquote>`;
   },
 
   loadInstagramEmbed() {
@@ -166,39 +189,45 @@ const App = {
     const isNew = listing.post_date && (new Date() - new Date(listing.post_date)) < 14 * 86400000;
     const hasOpenHouse = listing.open_house_date != null;
     const base = this._basePath || '';
-    const detailUrl = base + 'listing/' + listing.listing_id + '.html';
+    const isUserAdded = listing._userAdded;
+    const detailUrl = isUserAdded ? '#' : base + 'listing/' + listing.listing_id + '.html';
     const hasEmbed = this.hasDirectPost(listing);
 
     let badges = '';
-    if (isNew) badges += '<span class="badge badge-new">Nyhed</span>';
+    if (isNew) badges += '<span class="badge badge-new">New</span>';
+    if (isUserAdded) badges += '<span class="badge badge-new" style="background:#667eea;">User added</span>';
     if (hasOpenHouse) {
       const ohDate = new Date(listing.open_house_date);
-      const ohStr = `${ohDate.getDate()}/${ohDate.getMonth() + 1}`;
-      badges += `<span class="badge badge-open-house">\u00C5bent hus ${ohStr}</span>`;
+      const ohStr = `${ohDate.getMonth() + 1}/${ohDate.getDate()}`;
+      badges += `<span class="badge badge-open-house">Open house ${ohStr}</span>`;
     }
-    if (listing.listing_status === 'sold' || listing.status === 'solgt') badges += '<span class="badge badge-sold">Solgt</span>';
+    if (listing.listing_status === 'sold' || listing.status === 'solgt') badges += '<span class="badge badge-sold">Sold</span>';
 
     const imageArea = hasEmbed
       ? `<div class="card-image card-image-embed">${this.getInstagramEmbedHtml(listing.instagram_shortcode)}<div class="card-badges">${badges}</div></div>`
       : `<div class="card-image"><span class="placeholder-icon">\u{1F3E0}</span><div class="card-badges">${badges}</div></div>`;
 
     const igLink = this.getInstagramLink(listing);
-    const igLabel = hasEmbed ? 'Se opslag' : 'Se m\u00E6gler';
+    const igLabel = hasEmbed ? 'View post' : 'View broker';
+
+    const onClickAttr = isUserAdded
+      ? `onclick="if(event.target.tagName!=='A'){window.open('${igLink}','_blank');}"`
+      : `onclick="window.location.href='${detailUrl}'"`;
 
     return `
-      <div class="listing-card" onclick="window.location.href='${detailUrl}'">
+      <div class="listing-card" ${onClickAttr}>
         ${imageArea}
         <div class="card-body">
-          <div class="card-price ${!price ? 'no-price' : ''}">${price || 'Pris ikke oplyst'}</div>
+          <div class="card-price ${!price ? 'no-price' : ''}">${price || 'Price not listed'}</div>
           <div class="card-details">
             ${this.getArea(listing) ? `<span class="card-detail"><span class="detail-icon">\u{1F4CF}</span> ${this.getArea(listing)} m\u00B2</span>` : ''}
-            ${listing.rooms ? `<span class="card-detail"><span class="detail-icon">\u{1F6AA}</span> ${listing.rooms} rum</span>` : ''}
+            ${listing.rooms ? `<span class="card-detail"><span class="detail-icon">\u{1F6AA}</span> ${listing.rooms} rooms</span>` : ''}
             ${listing.property_type ? `<span class="card-detail">${App.translatePropertyType(listing.property_type)}</span>` : ''}
           </div>
           <div class="card-address">${listing.street_name || ''} ${listing.house_number || ''}${(listing.floor_or_unit || listing.floor) ? ', ' + (listing.floor_or_unit || listing.floor) : ''}</div>
           <div class="card-neighborhood">${listing.postal_code || ''} ${listing.city || ''} \u2014 ${listing.neighborhood || ''}</div>
           ${(listing.features && listing.features.length > 0) ? `<div class="card-features">${listing.features.slice(0, 4).map(f => `<span class="feature-tag">${f}</span>`).join('')}${listing.features.length > 4 ? `<span class="feature-tag feature-more">+${listing.features.length - 4}</span>` : ''}</div>` : ''}
-          ${listing.rating && listing.rating.overall_score ? `<div class="card-rating" onclick="event.stopPropagation(); window.location.href='${base}listing/${listing.listing_id}-rating.html';"><span class="card-rating-score" style="color:${App.scoreColor(listing.rating.overall_score)};">${listing.rating.overall_score}</span><span class="card-rating-label">${App.scoreLabel(listing.rating.overall_score)}</span>${listing.luxury && listing.luxury.luxury_score ? `<span class="card-luxury">&#9830; ${listing.luxury.luxury_score}</span>` : ''}<span class="card-rating-link">Se vurdering &#8594;</span></div>` : ''}
+          ${listing.rating && listing.rating.overall_score ? `<div class="card-rating" onclick="event.stopPropagation(); window.location.href='${base}listing/${listing.listing_id}-rating.html';"><span class="card-rating-score" style="color:${App.scoreColor(listing.rating.overall_score)};">${listing.rating.overall_score}</span><span class="card-rating-label">${App.scoreLabel(listing.rating.overall_score)}</span><span class="card-rating-link">View rating &#8594;</span></div>` : ''}
           <div class="card-footer">
             <span class="card-broker">${listing.brokerage_name || ''}</span>
             <span class="card-date">${date || ''}</span>
@@ -216,23 +245,23 @@ const App = {
   },
 
   scoreLabel(score) {
-    if (!score) return 'Ikke vurderet';
-    if (score >= 4.5) return 'Fremragende';
-    if (score >= 4.0) return 'Meget god';
-    if (score >= 3.5) return 'God';
-    if (score >= 3.0) return 'Gennemsnitlig';
-    if (score >= 2.0) return 'Under gennemsnit';
-    return 'Lav';
+    if (!score) return 'Not rated';
+    if (score >= 4.5) return 'Excellent';
+    if (score >= 4.0) return 'Very good';
+    if (score >= 3.5) return 'Good';
+    if (score >= 3.0) return 'Average';
+    if (score >= 2.0) return 'Below average';
+    return 'Low';
   },
 
   translatePropertyType(type) {
     const map = {
-      'apartment': 'Lejlighed',
-      'house': 'Hus',
+      'apartment': 'Apartment',
+      'house': 'House',
       'villa': 'Villa',
-      'townhouse': 'R\u00E6kkehus',
+      'townhouse': 'Townhouse',
       'penthouse': 'Penthouse',
-      'unknown': 'Ukendt'
+      'unknown': 'Unknown'
     };
     return map[type] || type;
   },
@@ -244,8 +273,8 @@ const App = {
       container.innerHTML = `
         <div class="empty-state">
           <div class="empty-icon">\u{1F50D}</div>
-          <h3>Ingen boliger fundet</h3>
-          <p>Pr\u00F8v at justere dine filtre for at se flere resultater.</p>
+          <h3>No listings found</h3>
+          <p>Try adjusting your filters to see more results.</p>
         </div>
       `;
       return;
@@ -260,12 +289,12 @@ const App = {
   updateResultCount(countId) {
     const el = document.getElementById(countId);
     if (el) {
-      el.innerHTML = `Viser <strong>${this.filtered.length}</strong> ${this.filtered.length === 1 ? 'bolig' : 'boliger'}`;
+      el.innerHTML = `Showing <strong>${this.filtered.length}</strong> ${this.filtered.length === 1 ? 'listing' : 'listings'}`;
     }
   },
 
   formatCompactPrice(val) {
-    if (val >= 1000000) return (val / 1000000).toFixed(1).replace('.0', '') + ' mio.';
+    if (val >= 1000000) return (val / 1000000).toFixed(1).replace('.0', '') + 'M';
     if (val >= 1000) return Math.round(val / 1000) + 'k';
     return String(val);
   },
@@ -291,9 +320,9 @@ const App = {
         const atMin = lo === rangeMin;
         const atMax = hi === rangeMax;
         if (atMin && atMax) labelEl.textContent = '';
-        else if (atMin) labelEl.textContent = '— ' + formatFn(hi);
-        else if (atMax) labelEl.textContent = formatFn(lo) + ' —';
-        else labelEl.textContent = formatFn(lo) + ' — ' + formatFn(hi);
+        else if (atMin) labelEl.textContent = '\u2014 ' + formatFn(hi);
+        else if (atMax) labelEl.textContent = formatFn(lo) + ' \u2014';
+        else labelEl.textContent = formatFn(lo) + ' \u2014 ' + formatFn(hi);
       }
       this.handleFilterChange();
     };
@@ -357,7 +386,7 @@ const App = {
 
     this.setupRangeSlider('filter-min-price', 'filter-max-price', 'price-range-fill', 'price-range-label', v => this.formatCompactPrice(v));
     this.setupRangeSlider('filter-min-area', 'filter-max-area', 'area-range-fill', 'area-range-label', v => v + ' m\u00B2');
-    this.setupRangeSlider('filter-min-rooms', 'filter-max-rooms', 'rooms-range-fill', 'rooms-range-label', v => v + ' rum');
+    this.setupRangeSlider('filter-min-rooms', 'filter-max-rooms', 'rooms-range-fill', 'rooms-range-label', v => v + ' rooms');
 
     const features = this.getAllFeatures();
     for (let i = 1; i <= 3; i++) {
@@ -509,6 +538,30 @@ const App = {
         this.loadInstagramEmbed();
         setTimeout(() => this.reprocessEmbeds(), 500);
       }
+    }
+  },
+
+  extractShortcode(url) {
+    if (!url) return null;
+    const patterns = [
+      /instagram\.com\/(?:p|reel|reels)\/([A-Za-z0-9_-]+)/,
+      /instagram\.com\/tv\/([A-Za-z0-9_-]+)/,
+    ];
+    for (const p of patterns) {
+      const m = url.match(p);
+      if (m) return m[1];
+    }
+    return null;
+  },
+
+  addUserListing(data) {
+    const userListings = JSON.parse(localStorage.getItem('bg_user_listings') || '[]');
+    userListings.push(data);
+    localStorage.setItem('bg_user_listings', JSON.stringify(userListings));
+    const existingIds = new Set(this.listings.map(l => l.listing_id));
+    if (!existingIds.has(data.listing_id)) {
+      this.listings.push(data);
+      this.filtered = [...this.listings];
     }
   }
 };

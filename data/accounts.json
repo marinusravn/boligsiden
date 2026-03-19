@@ -37,11 +37,14 @@
   },
   {
     "handle": "ivaneltoftnielsen",
-    "display_name": "Ivan Eltoft Nielsen",
-    "profile_url": "https://www.instagram.com/ivaneltoftnielsen/",
-    "brokerage": "Ivan Eltoft Nielsen ApS",
+    "account_url": "https://www.instagram.com/ivaneltoftnielsen/",
+    "brokerage_name": "Ivan Eltoft Nielsen",
+    "office_address": "København & Sjælland",
+    "phone": null,
+    "email": null,
     "website": "https://eltoftnielsen.dk/",
-    "area": "København & Sjælland",
-    "notes": "Anerkendt ejendomsmægler med 24 filialer på Sjælland. Grundlagt 2008."
+    "focus_area": "København & Sjælland",
+    "specialization": "Liebhaverboliger, Ejendomme på Sjælland",
+    "listings_found": 1
   }
 ]

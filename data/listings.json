@@ -53,100 +53,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 4.5,
-          "detail": "61.607 kr/m² vs. gns. 85.000 kr/m² i Indre By",
+          "detail": "61.607 DKK/m² vs. avg. 85.000 DKK/m² in Indre By",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.5,
           "detail": "Indre By",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 1.5,
-          "detail": "Ingen altan/uderum nævnt",
+          "detail": "No balcony/outdoor space mentioned",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 3.2,
           "detail": "Herskabelig, Lysindfald",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.8,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 2.5,
-          "detail": "Herskabelig",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 2.5,
-          "detail": "Herskabelig",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     }
@@ -205,100 +164,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 1.0,
-          "detail": "97.941 kr/m² vs. gns. 73.000 kr/m² i Østerbro",
+          "detail": "97.941 DKK/m² vs. avg. 73.000 DKK/m² in Østerbro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 4.05,
-          "detail": "Renoveret/opdateret, Lysindfald",
+          "detail": "Renovated/updated, Lysindfald",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": 2.5,
-          "detail": "Energimærke D",
+          "detail": "Energy label D",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.3,
-          "detail": "Vaskemaskine",
+          "detail": "Washing machine",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.4,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -409,100 +327,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 1.0,
-          "detail": "101.990 kr/m² vs. gns. 62.000 kr/m² i Nørrebro",
+          "detail": "101.990 DKK/m² vs. avg. 62.000 DKK/m² in Nørrebro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 3.8,
           "detail": "Nørrebro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 1.5,
-          "detail": "Ingen altan/uderum nævnt",
+          "detail": "No balcony/outdoor space mentioned",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.5,
-          "detail": "Ikke nærmere beskrevet",
+          "detail": "Not described in detail",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": 3.5,
-          "detail": "Energimærke C",
+          "detail": "Energy label C",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.5,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.9,
-          "detail": "98 m²",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.3,
-          "detail": "Højt prisleje",
-          "weight": 0.15
         }
       ]
     },
@@ -621,100 +498,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 2.0,
-          "detail": "78.699 kr/m² vs. gns. 62.000 kr/m² i Nørrebro",
+          "detail": "78.699 DKK/m² vs. avg. 62.000 DKK/m² in Nørrebro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 3.8,
           "detail": "Nørrebro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.5,
-          "detail": "Ikke nærmere beskrevet",
+          "detail": "Not described in detail",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": 3.5,
-          "detail": "Energimærke C",
+          "detail": "Energy label C",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.4,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -818,100 +654,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 4.0,
-          "detail": "64.338 kr/m² vs. gns. 73.000 kr/m² i Østerbro",
+          "detail": "64.338 DKK/m² vs. avg. 73.000 DKK/m² in Østerbro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.85,
           "detail": "Herskabelig",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 2.0,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 2.5,
-          "detail": "Herskabelig",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 3.5,
-          "detail": "Herskabelig, Stor bolig (136 m²)",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.3,
-          "detail": "Højt prisleje",
-          "weight": 0.15
         }
       ]
     },
@@ -1045,100 +840,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 3.0,
-          "detail": "70.887 kr/m² vs. gns. 73.000 kr/m² i Østerbro",
+          "detail": "70.887 DKK/m² vs. avg. 73.000 DKK/m² in Østerbro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.3,
-          "detail": "Altan, Vestvendt",
+          "detail": "Balcony, West-facing",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.5,
-          "detail": "Ikke nærmere beskrevet",
+          "detail": "Not described in detail",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 4.2,
-          "detail": "Elevator, Parkering, Kælder",
+          "detail": "Elevator, Parking, Basement",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.6,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 2.1,
-          "detail": "Elevator, Udsigt",
-          "weight": 0.15
         }
       ]
     },
@@ -1248,100 +1002,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 2.5,
-          "detail": "89.506 kr/m² vs. gns. 85.000 kr/m² i Indre By",
+          "detail": "89.506 DKK/m² vs. avg. 85.000 DKK/m² in Indre By",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.5,
           "detail": "Indre By",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 4.5,
-          "detail": "Nyere køkken, Åben planløsning",
+          "detail": "Updated kitchen, Open floor plan",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.5,
-          "detail": "Ikke nærmere beskrevet",
+          "detail": "Not described in detail",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 3.0,
           "detail": "Elevator",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.9,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 2.0,
-          "detail": "Nyere køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 2.5,
-          "detail": "Stor bolig (162 m²)",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 2.4000000000000004,
-          "detail": "Elevator, Premium prisleje",
-          "weight": 0.15
         }
       ]
     }
@@ -1385,100 +1098,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": null,
-          "detail": "Pris eller areal ikke tilgængeligt",
+          "detail": "Price or area not available",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.5,
           "detail": "Indre By",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 1.5,
-          "detail": "Ingen altan/uderum nævnt",
+          "detail": "No balcony/outdoor space mentioned",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.8,
-          "detail": "Gulvvarme",
+          "detail": "Underfloor heating",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.7,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 2.4,
-          "detail": "Gulvvarme",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.3,
-          "detail": "Højt prisleje",
-          "weight": 0.15
         }
       ]
     },
@@ -1561,100 +1233,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 1.0,
-          "detail": "98.190 kr/m² vs. gns. 73.000 kr/m² i Frederiksberg",
+          "detail": "98.190 DKK/m² vs. avg. 73.000 DKK/m² in Frederiksberg",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.3,
           "detail": "Frederiksberg",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 4.5,
-          "detail": "Altan, Have/gård",
+          "detail": "Balcony, Garden/yard",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.5,
-          "detail": "Ikke nærmere beskrevet",
+          "detail": "Not described in detail",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.4,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -1746,100 +1377,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": null,
-          "detail": "Pris eller areal ikke tilgængeligt",
+          "detail": "Price or area not available",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 1.5,
-          "detail": "Ingen altan/uderum nævnt",
+          "detail": "No balcony/outdoor space mentioned",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 4.0,
-          "detail": "Nyere køkken",
+          "detail": "Updated kitchen",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 3.7,
-          "detail": "Renoveret/opdateret",
+          "detail": "Renovated/updated",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 2.0,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 3.5,
-          "detail": "Snedkerkøkken, Nyere køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -1915,100 +1505,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": null,
-          "detail": "Pris eller areal ikke tilgængeligt",
+          "detail": "Price or area not available",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.5,
           "detail": "Indre By",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.5,
-          "detail": "Ikke nærmere beskrevet",
+          "detail": "Not described in detail",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.4,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -2095,100 +1644,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": null,
-          "detail": "Pris eller areal ikke tilgængeligt",
+          "detail": "Price or area not available",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Have/gård",
+          "detail": "Garden/yard",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.85,
           "detail": "Lysindfald",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.4,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -2276,100 +1784,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": null,
-          "detail": "Pris eller areal ikke tilgængeligt",
+          "detail": "Price or area not available",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 1.5,
-          "detail": "Ingen altan/uderum nævnt",
+          "detail": "No balcony/outdoor space mentioned",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 5.0,
-          "detail": "Renoveret/opdateret, Plankegulve, Stuk, Højt til loftet, Herskabelig, Lysindfald",
+          "detail": "Renovated/updated, Plankegulve, Stuk, Højt til loftet, Herskabelig, Lysindfald",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 2.8,
-      "luxury_label": "Komfort",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 2.0,
-          "detail": "Eksklusiv",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 4.6,
-          "detail": "Plankegulve, Stuk, Herskabelig, Højt til loftet",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 4.7,
-          "detail": "Højt til loftet, Herskabelig, Stor bolig (155 m²)",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.5,
-          "detail": "Udsigt",
-          "weight": 0.15
         }
       ]
     }
@@ -2418,100 +1885,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": null,
-          "detail": "Pris eller areal ikke tilgængeligt",
+          "detail": "Price or area not available",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.3,
           "detail": "Frederiksberg",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.5,
-          "detail": "Altan, Sydvendt",
+          "detail": "Balcony, South-facing",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 4.0,
-          "detail": "Nyere køkken",
+          "detail": "Updated kitchen",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 3.5,
-          "detail": "Højt til loftet, Lysindfald, Gulvvarme",
+          "detail": "Højt til loftet, Lysindfald, Underfloor heating",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 2.1,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 2.0,
-          "detail": "Nyere køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 2.4,
-          "detail": "Gulvvarme",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 2.1,
-          "detail": "Højt til loftet",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 2.7,
-          "detail": "Højt til loftet",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -2604,100 +2030,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 1.0,
-          "detail": "99.898 kr/m² vs. gns. 62.000 kr/m² i Nørrebro",
+          "detail": "99.898 DKK/m² vs. avg. 62.000 DKK/m² in Nørrebro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 3.8,
           "detail": "Nørrebro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.85,
           "detail": "Lysindfald",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": 2.5,
-          "detail": "Energimærke D",
+          "detail": "Energy label D",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.4,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -2798,100 +2183,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 2.0,
-          "detail": "72.900 kr/m² vs. gns. 62.000 kr/m² i Nørrebro",
+          "detail": "72.900 DKK/m² vs. avg. 62.000 DKK/m² in Nørrebro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 3.8,
           "detail": "Nørrebro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 3.0,
-          "detail": "Altan",
+          "detail": "Balcony",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 4.8,
-          "detail": "Nyere køkken, Åben planløsning, Opvaskemaskine",
+          "detail": "Updated kitchen, Open floor plan, Dishwasher",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 2.85,
           "detail": "Lysindfald",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": 3.5,
-          "detail": "Energimærke C",
+          "detail": "Energy label C",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.3,
-          "detail": "Vaskemaskine",
+          "detail": "Washing machine",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 2.0,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 3.5,
-          "detail": "Snedkerkøkken, Nyere køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.5,
-          "detail": "Standard rumforhold",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -2973,100 +2317,59 @@
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
           "score": 4.0,
-          "detail": "63.711 kr/m² vs. gns. 73.000 kr/m² i Østerbro",
+          "detail": "63.711 DKK/m² vs. avg. 73.000 DKK/m² in Østerbro",
           "weight": 0.3
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Kvarterets popularitet og beliggenhed",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.2,
           "detail": "Østerbro",
           "weight": 0.15
         },
         {
           "key": "outdoor",
-          "label": "Altan & uderum",
-          "description": "Altan, have, terrasse, orientering",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
           "score": 1.5,
-          "detail": "Ingen altan/uderum nævnt",
+          "detail": "No balcony/outdoor space mentioned",
           "weight": 0.15
         },
         {
           "key": "kitchen",
-          "label": "Køkken",
-          "description": "Køkkenets stand og kvalitet",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
           "score": 2.5,
-          "detail": "Standard køkken (ikke nærmere beskrevet)",
+          "detail": "Standard kitchen (not described in detail)",
           "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand & renovering",
-          "description": "Boligens generelle stand og vedligeholdelse",
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
           "score": 3.7,
-          "detail": "Renoveret/opdateret",
+          "detail": "Renovated/updated",
           "weight": 0.13
         },
         {
           "key": "energy",
-          "label": "Energimærke",
-          "description": "Energieffektivitet",
+          "label": "Energy label",
+          "description": "Energy efficiency",
           "score": null,
-          "detail": "Energimærke ikke oplyst",
+          "detail": "Energy label not available",
           "weight": 0.07
         },
         {
           "key": "extras",
-          "label": "Faciliteter",
-          "description": "Elevator, parkering, vaskemaskine m.m.",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
           "score": 2.0,
-          "detail": "Ingen ekstra faciliteter nævnt",
+          "detail": "No extra facilities mentioned",
           "weight": 0.08
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 1.5,
-      "luxury_label": "Standard",
-      "luxury_criteria": [
-        {
-          "key": "lux_kitchen",
-          "label": "Køkken",
-          "score": 1.5,
-          "detail": "Standard køkken",
-          "weight": 0.3
-        },
-        {
-          "key": "lux_bathroom",
-          "label": "Badeværelse",
-          "score": 1.5,
-          "detail": "Standard badeværelse",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_materials",
-          "label": "Materialer",
-          "score": 1.5,
-          "detail": "Standard materialer",
-          "weight": 0.2
-        },
-        {
-          "key": "lux_space",
-          "label": "Rum & højde",
-          "score": 1.9,
-          "detail": "83 m²",
-          "weight": 0.15
-        },
-        {
-          "key": "lux_exclusive",
-          "label": "Eksklusivitet",
-          "score": 1.0,
-          "detail": "Standard",
-          "weight": 0.15
         }
       ]
     },
@@ -3164,73 +2467,63 @@
       "Bornholmerkvarteret"
     ],
     "rating": {
-      "overall_score": 3.8,
+      "overall_score": 2.7,
       "criteria": [
         {
           "key": "price",
-          "label": "Prisvurdering",
-          "description": "Kvadratmeterpris vs. områdets gennemsnit",
-          "score": 3.0,
-          "detail": "93.985 kr/m² vs. gns. 85.000 kr/m² i Indre By",
+          "label": "Price assessment",
+          "description": "Price per m² vs. area average (Boligsiden Jan. 2026)",
+          "score": 2.5,
+          "detail": "93.985 DKK/m² vs. avg. 85.000 DKK/m² in Indre By",
           "weight": 0.3
-        },
-        {
-          "key": "area",
-          "label": "Størrelse",
-          "description": "133 m² er over gennemsnittet for Indre By",
-          "score": 4.5,
-          "detail": "133 m² - rummelig lejlighed",
-          "weight": 0.2
         },
         {
           "key": "location",
-          "label": "Beliggenhed",
-          "description": "Bornholmerkvarteret, tæt på Churchillparken",
+          "label": "Location",
+          "description": "Neighborhood popularity and location",
           "score": 4.5,
-          "detail": "Topbeliggenhed i Indre By med udsigt til park",
-          "weight": 0.3
+          "detail": "Indre By",
+          "weight": 0.15
+        },
+        {
+          "key": "outdoor",
+          "label": "Balcony & outdoor",
+          "description": "Balcony, garden, terrace, orientation",
+          "score": 1.5,
+          "detail": "No balcony/outdoor space mentioned",
+          "weight": 0.15
+        },
+        {
+          "key": "kitchen",
+          "label": "Kitchen",
+          "description": "Kitchen condition and quality",
+          "score": 2.5,
+          "detail": "Standard kitchen (not described in detail)",
+          "weight": 0.12
         },
         {
           "key": "condition",
-          "label": "Stand",
-          "description": "Velholdt og indflytningsklar",
-          "score": 4.0,
-          "detail": "Beskrevet som velholdt og lækkert",
-          "weight": 0.2
-        }
-      ]
-    },
-    "luxury": {
-      "luxury_score": 4.2,
-      "luxury_label": "Liebhaver",
-      "criteria": [
-        {
-          "key": "elevator",
-          "label": "Privat elevator",
-          "description": "Elevator direkte til lejligheden",
-          "score": 5.0,
-          "weight": 0.25
+          "label": "Condition & renovation",
+          "description": "Overall condition and maintenance",
+          "score": 2.5,
+          "detail": "Not described in detail",
+          "weight": 0.13
         },
         {
-          "key": "balcony",
-          "label": "Dobbelt balkon",
-          "description": "2 balkoner med udsigt til Churchillparken og gård",
-          "score": 4.5,
-          "weight": 0.2
+          "key": "energy",
+          "label": "Energy label",
+          "description": "Energy efficiency",
+          "score": null,
+          "detail": "Energy label not available",
+          "weight": 0.07
         },
         {
-          "key": "location",
-          "label": "Beliggenhed",
-          "description": "Bornholmerkvarteret - Indre Bys fornemmeste",
-          "score": 4.5,
-          "weight": 0.3
-        },
-        {
-          "key": "character",
-          "label": "Karakter",
-          "description": "Fredet nostalgi, dørtelefon, historisk charme",
-          "score": 3.5,
-          "weight": 0.25
+          "key": "extras",
+          "label": "Facilities",
+          "description": "Elevator, parking, washing machine, etc.",
+          "score": 3.0,
+          "detail": "Elevator",
+          "weight": 0.08
         }
       ]
     },

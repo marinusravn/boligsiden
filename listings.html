@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alle boliger — BoligGram</title>
+  <title>All listings — BoligGram</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
@@ -17,19 +17,20 @@
         BoligGram
       </a>
       <nav class="site-nav">
-        <a href="index.html">Forside</a>
-        <a href="listings.html" class="active">Boliger</a>
-        <a href="map.html">Kort</a>
-        <a href="subscribe.html">Abonner</a>
+        <a href="index.html">Home</a>
+        <a href="listings.html" class="active">Listings</a>
+        <a href="map.html">Map</a>
+        <a href="add.html">Add Listing</a>
+        <a href="subscribe.html">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <section class="hero hero-small">
-    <h1>Boliger til salg</h1>
-    <p>Gennemse alle boliger fundet via Instagram-mæglere i København</p>
+    <h1>Properties for sale</h1>
+    <p>Browse all properties found via Instagram brokers in Copenhagen</p>
     <div class="search-bar-hero">
-      <input type="text" id="search-input" class="search-input" placeholder="Søg adresse, område, mægler, ejer..." autocomplete="off">
+      <input type="text" id="search-input" class="search-input" placeholder="Search address, area, broker, owner..." autocomplete="off">
     </div>
   </section>
 
@@ -39,19 +40,19 @@
       <div class="filter-bar">
         <div class="filter-row">
           <div class="filter-group">
-            <label for="filter-neighborhood">Område</label>
+            <label for="filter-neighborhood">Area</label>
             <select id="filter-neighborhood">
-              <option value="">Alle områder</option>
+              <option value="">All areas</option>
             </select>
           </div>
           <div class="filter-group">
-            <label for="filter-city">By</label>
+            <label for="filter-city">City</label>
             <select id="filter-city">
-              <option value="">Alle byer</option>
+              <option value="">All cities</option>
             </select>
           </div>
           <div class="filter-group filter-group-wide">
-            <label>Pris <span class="range-values" id="price-range-label"></span></label>
+            <label>Price <span class="range-values" id="price-range-label"></span></label>
             <div class="range-slider-wrap">
               <input type="range" id="filter-min-price" class="range-input range-input-min" min="0" max="15000000" step="100000" value="0">
               <input type="range" id="filter-max-price" class="range-input range-input-max" min="0" max="15000000" step="100000" value="15000000">
@@ -61,7 +62,7 @@
         </div>
         <div class="filter-row" style="margin-top: 12px;">
           <div class="filter-group">
-            <label>Størrelse <span class="range-values" id="area-range-label"></span></label>
+            <label>Size <span class="range-values" id="area-range-label"></span></label>
             <div class="range-slider-wrap">
               <input type="range" id="filter-min-area" class="range-input range-input-min" min="0" max="200" step="5" value="0">
               <input type="range" id="filter-max-area" class="range-input range-input-max" min="0" max="200" step="5" value="200">
@@ -69,7 +70,7 @@
             </div>
           </div>
           <div class="filter-group">
-            <label>Værelser <span class="range-values" id="rooms-range-label"></span></label>
+            <label>Rooms <span class="range-values" id="rooms-range-label"></span></label>
             <div class="range-slider-wrap">
               <input type="range" id="filter-min-rooms" class="range-input range-input-min" min="1" max="6" step="1" value="1">
               <input type="range" id="filter-max-rooms" class="range-input range-input-max" min="1" max="6" step="1" value="6">
@@ -77,60 +78,60 @@
             </div>
           </div>
           <div class="filter-group">
-            <label for="filter-type">Boligtype</label>
+            <label for="filter-type">Property type</label>
             <select id="filter-type">
-              <option value="">Alle typer</option>
+              <option value="">All types</option>
             </select>
           </div>
           <div class="filter-group">
-            <label for="filter-brokerage">Mægler</label>
+            <label for="filter-brokerage">Broker</label>
             <select id="filter-brokerage">
-              <option value="">Alle mæglere</option>
+              <option value="">All brokers</option>
             </select>
           </div>
         </div>
         <div class="filter-row" style="margin-top: 12px;">
           <div class="filter-group">
-            <label for="filter-feature-1">Egenskab</label>
+            <label for="filter-feature-1">Feature</label>
             <select id="filter-feature-1">
-              <option value="">Vælg egenskab...</option>
+              <option value="">Select feature...</option>
             </select>
           </div>
           <div class="filter-group">
-            <label for="filter-feature-2">Egenskab</label>
+            <label for="filter-feature-2">Feature</label>
             <select id="filter-feature-2">
-              <option value="">Vælg egenskab...</option>
+              <option value="">Select feature...</option>
             </select>
           </div>
           <div class="filter-group">
-            <label for="filter-feature-3">Egenskab</label>
+            <label for="filter-feature-3">Feature</label>
             <select id="filter-feature-3">
-              <option value="">Vælg egenskab...</option>
+              <option value="">Select feature...</option>
             </select>
           </div>
         </div>
         <div class="filter-row-secondary">
           <label class="filter-checkbox">
             <input type="checkbox" id="filter-only-price">
-            Kun med pris
+            Only with price
           </label>
           <label class="filter-checkbox">
             <input type="checkbox" id="filter-only-area">
-            Kun med m²
+            Only with m²
           </label>
-          <button class="btn btn-sm btn-outline" id="filter-reset">Nulstil filtre</button>
+          <button class="btn btn-sm btn-outline" id="filter-reset">Reset filters</button>
         </div>
       </div>
 
       <div class="results-header">
-        <div class="result-count" id="result-count">Viser <strong>0</strong> boliger</div>
+        <div class="result-count" id="result-count">Showing <strong>0</strong> listings</div>
         <select class="sort-select" id="sort-select">
-          <option value="newest">Nyeste først</option>
-          <option value="oldest">Ældste først</option>
-          <option value="price-asc">Pris — lav til høj</option>
-          <option value="price-desc">Pris — høj til lav</option>
-          <option value="area-asc">Størrelse — lav til høj</option>
-          <option value="area-desc">Størrelse — høj til lav</option>
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="price-asc">Price — low to high</option>
+          <option value="price-desc">Price — high to low</option>
+          <option value="area-asc">Size — low to high</option>
+          <option value="area-desc">Size — high to low</option>
         </select>
       </div>
 
@@ -143,16 +144,17 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">BoligGram</div>
-        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+        <p class="footer-text">Properties for sale found via Instagram brokers in Copenhagen.</p>
       </div>
       <div class="footer-links">
-        <a href="index.html">Forside</a>
-        <a href="listings.html">Boliger</a>
-        <a href="map.html">Kort</a>
-        <a href="subscribe.html">Abonner</a>
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="map.html">Map</a>
+        <a href="add.html">Add Listing</a>
+        <a href="subscribe.html">Subscribe</a>
       </div>
       <div class="footer-disclaimer">
-        BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.
+        BoligGram is not affiliated with any real estate chain or Instagram. Always verify information directly with the broker.
       </div>
     </div>
   </footer>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Listing — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .add-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    .add-form {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ig-preview {
+      margin: 20px 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-tag-bg);
+    }
+
+    .ig-preview.empty {
+      padding: 32px;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    .ig-preview .instagram-media {
+      margin: 0 auto !important;
+      max-width: 100% !important;
+      min-width: unset !important;
+    }
+
+    .add-success {
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+
+    .add-success .success-icon {
+      font-size: 3rem;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      margin: 0 auto 16px;
+    }
+
+    .add-success h2 {
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .saved-listings {
+      margin-top: 32px;
+      padding: 24px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+
+    .saved-listings h3 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .saved-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .saved-item:last-child {
+      border-bottom: none;
+    }
+
+    .saved-item-info {
+      font-size: 0.85rem;
+    }
+
+    .saved-item-info strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .saved-item-info span {
+      color: var(--color-text-muted);
+      font-size: 0.78rem;
+    }
+
+    .delete-btn {
+      background: none;
+      border: 1px solid #e74c3c;
+      color: #e74c3c;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+
+    .delete-btn:hover {
+      background: #e74c3c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="map.html">Map</a>
+        <a href="add.html" class="active">Add Listing</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-small">
+    <h1>Add a listing from Instagram</h1>
+    <p>Paste an Instagram link to add a property listing to the site</p>
+  </section>
+
+  <div class="add-container">
+    <div id="add-form-container">
+      <form id="add-form" class="add-form">
+        <div class="form-group">
+          <label for="ig-url">Instagram URL *</label>
+          <input type="url" id="ig-url" required placeholder="https://www.instagram.com/p/... or /reel/...">
+        </div>
+
+        <div class="ig-preview empty" id="ig-preview">
+          Paste an Instagram URL above to see a preview
+        </div>
+
+        <h3 class="form-section-title">Property details (optional)</h3>
+        <p class="form-hint">Fill in what you know. Leave fields empty if unsure.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="add-address">Address</label>
+            <input type="text" id="add-address" placeholder="e.g. Rådhusstræde 4F">
+          </div>
+          <div class="form-group">
+            <label for="add-floor">Floor / Unit</label>
+            <input type="text" id="add-floor" placeholder="e.g. 3rd floor">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="add-postal">Postal code</label>
+            <input type="text" id="add-postal" placeholder="e.g. 2100">
+          </div>
+          <div class="form-group">
+            <label for="add-city">City</label>
+            <input type="text" id="add-city" placeholder="e.g. København Ø">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="add-neighborhood">Neighborhood</label>
+          <input type="text" id="add-neighborhood" placeholder="e.g. Østerbro">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="add-price">Price (DKK)</label>
+            <input type="number" id="add-price" placeholder="e.g. 4500000" step="50000">
+          </div>
+          <div class="form-group">
+            <label for="add-area">Size (m²)</label>
+            <input type="number" id="add-area" placeholder="e.g. 85">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="add-rooms">Rooms</label>
+            <input type="number" id="add-rooms" min="1" max="20" placeholder="e.g. 3">
+          </div>
+          <div class="form-group">
+            <label for="add-type">Property type</label>
+            <select id="add-type">
+              <option value="">Select...</option>
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+              <option value="villa">Villa</option>
+              <option value="townhouse">Townhouse</option>
+              <option value="penthouse">Penthouse</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="add-broker">Broker / Account name</label>
+          <input type="text" id="add-broker" placeholder="e.g. Alecsander Delfs">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Add listing</button>
+      </form>
+    </div>
+
+    <div id="add-success" class="add-success" style="display:none;">
+      <div class="success-icon">&#10003;</div>
+      <h2>Listing added!</h2>
+      <p>The listing has been saved and will appear on the Listings page.</p>
+      <div style="margin-top:16px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="listings.html" class="btn btn-primary">View all listings</a>
+        <button class="btn btn-outline" id="add-another-btn">Add another</button>
+      </div>
+    </div>
+
+    <div id="saved-section" class="saved-listings" style="display:none;">
+      <h3>Your added listings</h3>
+      <div id="saved-list"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Properties for sale found via Instagram brokers in Copenhagen.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="map.html">Map</a>
+        <a href="add.html">Add Listing</a>
+        <a href="subscribe.html">Subscribe</a>
+      </div>
+      <div class="footer-disclaimer">
+        BoligGram is not affiliated with any real estate chain or Instagram. Always verify information directly with the broker.
+      </div>
+    </div>
+  </footer>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+
+      const igUrlInput = document.getElementById('ig-url');
+      const previewEl = document.getElementById('ig-preview');
+      const form = document.getElementById('add-form');
+      let currentShortcode = null;
+
+      function renderSavedListings() {
+        const userListings = JSON.parse(localStorage.getItem('bg_user_listings') || '[]');
+        const section = document.getElementById('saved-section');
+        const list = document.getElementById('saved-list');
+        if (!userListings.length) {
+          section.style.display = 'none';
+          return;
+        }
+        section.style.display = 'block';
+        list.innerHTML = userListings.map((l, i) => `
+          <div class="saved-item">
+            <div class="saved-item-info">
+              <strong>${l.street_name || 'Unknown address'} ${l.house_number || ''}</strong>
+              <span>${l.price_dkk ? new Intl.NumberFormat('da-DK').format(l.price_dkk) + ' DKK' : 'No price'} · ${l.instagram_shortcode || 'No shortcode'}</span>
+            </div>
+            <button class="delete-btn" data-index="${i}">Remove</button>
+          </div>
+        `).join('');
+
+        list.querySelectorAll('.delete-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = parseInt(btn.dataset.index);
+            userListings.splice(idx, 1);
+            localStorage.setItem('bg_user_listings', JSON.stringify(userListings));
+            renderSavedListings();
+          });
+        });
+      }
+
+      let debounce;
+      igUrlInput.addEventListener('input', () => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => {
+          const url = igUrlInput.value.trim();
+          const shortcode = App.extractShortcode(url);
+          currentShortcode = shortcode;
+
+          if (shortcode) {
+            previewEl.className = 'ig-preview';
+            previewEl.innerHTML = App.getInstagramEmbedHtml(shortcode);
+            if (window.instgrm && window.instgrm.Embeds) {
+              window.instgrm.Embeds.process();
+            }
+          } else {
+            previewEl.className = 'ig-preview empty';
+            previewEl.textContent = url ? 'Could not extract shortcode from URL' : 'Paste an Instagram URL above to see a preview';
+          }
+        }, 400);
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!currentShortcode) {
+          alert('Please paste a valid Instagram URL first.');
+          return;
+        }
+
+        const addrParts = (document.getElementById('add-address').value || '').trim().match(/^(.+?)\s+(\S+)$/) || [];
+        const streetName = addrParts[1] || document.getElementById('add-address').value.trim() || '';
+        const houseNumber = addrParts[2] || '';
+
+        const listing = {
+          listing_id: 'user-' + currentShortcode,
+          _userAdded: true,
+          source_account_handle: '',
+          source_account_url: '',
+          instagram_post_url: `https://www.instagram.com/p/${currentShortcode}/`,
+          instagram_shortcode: currentShortcode,
+          post_date: new Date().toISOString().split('T')[0],
+          post_caption_raw: '',
+          address_raw: document.getElementById('add-address').value.trim(),
+          street_name: streetName,
+          house_number: houseNumber,
+          floor_or_unit: document.getElementById('add-floor').value.trim() || null,
+          postal_code: document.getElementById('add-postal').value.trim() || null,
+          city: document.getElementById('add-city').value.trim() || null,
+          neighborhood: document.getElementById('add-neighborhood').value.trim() || null,
+          property_type: document.getElementById('add-type').value || 'apartment',
+          rooms: parseInt(document.getElementById('add-rooms').value) || null,
+          approximate_area_sqm: parseInt(document.getElementById('add-area').value) || null,
+          price_dkk: parseInt(document.getElementById('add-price').value) || null,
+          brokerage_name: document.getElementById('add-broker').value.trim() || null,
+          listing_status: 'for_sale',
+          features: [],
+          latitude: null,
+          longitude: null,
+        };
+
+        App.addUserListing(listing);
+
+        document.getElementById('add-form-container').style.display = 'none';
+        document.getElementById('add-success').style.display = 'block';
+        renderSavedListings();
+      });
+
+      document.getElementById('add-another-btn').addEventListener('click', () => {
+        form.reset();
+        currentShortcode = null;
+        previewEl.className = 'ig-preview empty';
+        previewEl.textContent = 'Paste an Instagram URL above to see a preview';
+        document.getElementById('add-form-container').style.display = 'block';
+        document.getElementById('add-success').style.display = 'none';
+      });
+
+      renderSavedListings();
+    })();
+  </script>
+
+</body>
+</html>

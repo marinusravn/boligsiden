@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abonner på boliger — BoligGram</title>
+  <title>Subscribe to listings — BoligGram</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
@@ -17,17 +17,18 @@
         BoligGram
       </a>
       <nav class="site-nav">
-        <a href="index.html">Forside</a>
-        <a href="listings.html">Boliger</a>
-        <a href="map.html">Kort</a>
-        <a href="subscribe.html" class="active">Abonner</a>
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="map.html">Map</a>
+        <a href="add.html">Add Listing</a>
+        <a href="subscribe.html" class="active">Subscribe</a>
       </nav>
     </div>
   </header>
 
   <section class="hero hero-small">
-    <h1>Få besked om nye boliger</h1>
-    <p>Tilmeld dig og modtag en e-mail, når nye boliger matcher dine kriterier</p>
+    <h1>Get notified about new listings</h1>
+    <p>Sign up and receive an email when new properties match your criteria</p>
   </section>
 
   <div class="container">
@@ -36,100 +37,98 @@
       <div id="subscribe-form-container">
         <form id="subscribe-form" class="subscribe-form">
           <div class="form-group">
-            <label for="sub-email">E-mail *</label>
-            <input type="email" id="sub-email" required placeholder="din@email.dk">
+            <label for="sub-email">Email *</label>
+            <input type="email" id="sub-email" required placeholder="your@email.com">
           </div>
 
-          <h3 class="form-section-title">Dine kriterier (valgfri)</h3>
-          <p class="form-hint">Udfyld kun de felter, du vil filtrere på. Lad resten stå tomme for at modtage alle boliger.</p>
+          <h3 class="form-section-title">Your criteria (optional)</h3>
+          <p class="form-hint">Only fill in the fields you want to filter on. Leave the rest empty to receive all listings.</p>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="sub-min-price">Min. pris (DKK)</label>
-              <input type="number" id="sub-min-price" placeholder="F.eks. 2000000" step="100000">
+              <label for="sub-min-price">Min. price (DKK)</label>
+              <input type="number" id="sub-min-price" placeholder="e.g. 2000000" step="100000">
             </div>
             <div class="form-group">
-              <label for="sub-max-price">Max. pris (DKK)</label>
-              <input type="number" id="sub-max-price" placeholder="F.eks. 5000000" step="100000">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="sub-min-area">Min. størrelse (m²)</label>
-              <input type="number" id="sub-min-area" placeholder="F.eks. 60">
-            </div>
-            <div class="form-group">
-              <label for="sub-max-area">Max. størrelse (m²)</label>
-              <input type="number" id="sub-max-area" placeholder="F.eks. 120">
+              <label for="sub-max-price">Max. price (DKK)</label>
+              <input type="number" id="sub-max-price" placeholder="e.g. 5000000" step="100000">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="sub-min-rooms">Min. rum</label>
-              <input type="number" id="sub-min-rooms" min="1" max="10" placeholder="F.eks. 2">
+              <label for="sub-min-area">Min. size (m²)</label>
+              <input type="number" id="sub-min-area" placeholder="e.g. 60">
             </div>
             <div class="form-group">
-              <label for="sub-max-rooms">Max. rum</label>
-              <input type="number" id="sub-max-rooms" min="1" max="10" placeholder="F.eks. 4">
+              <label for="sub-max-area">Max. size (m²)</label>
+              <input type="number" id="sub-max-area" placeholder="e.g. 120">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-min-rooms">Min. rooms</label>
+              <input type="number" id="sub-min-rooms" min="1" max="10" placeholder="e.g. 2">
+            </div>
+            <div class="form-group">
+              <label for="sub-max-rooms">Max. rooms</label>
+              <input type="number" id="sub-max-rooms" min="1" max="10" placeholder="e.g. 4">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="sub-postal">Postnumre (kommasepareret)</label>
-            <input type="text" id="sub-postal" placeholder="F.eks. 2100, 2200, 1000-1499">
+            <label for="sub-postal">Postal codes (comma-separated)</label>
+            <input type="text" id="sub-postal" placeholder="e.g. 2100, 2200, 1000-1499">
           </div>
 
           <div class="form-group">
-            <label for="sub-neighborhoods">Områder</label>
+            <label for="sub-neighborhoods">Areas</label>
             <select id="sub-neighborhoods" multiple size="4">
-              <!-- Populated by JS -->
             </select>
-            <span class="form-hint">Hold Ctrl for at vælge flere</span>
+            <span class="form-hint">Hold Ctrl to select multiple</span>
           </div>
 
           <div class="form-group">
-            <label>Egenskaber</label>
+            <label>Features</label>
             <div id="sub-features" class="feature-checkboxes">
-              <!-- Populated by JS -->
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block">Tilmeld</button>
+          <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
         </form>
       </div>
 
       <div id="subscribe-success" class="subscribe-success" style="display:none;">
         <div class="success-icon">&#10003;</div>
-        <h2>Du er tilmeldt!</h2>
-        <p>Vi sender dig en e-mail, når nye boliger matcher dine kriterier.</p>
-        <p class="form-hint">Du kan til enhver tid afmelde dig via linket i e-mailen.</p>
-        <a href="listings.html" class="btn btn-outline" style="margin-top:16px;">Se alle boliger</a>
+        <h2>You're subscribed!</h2>
+        <p>We'll send you an email when new listings match your criteria.</p>
+        <p class="form-hint">You can unsubscribe at any time via the link in the email.</p>
+        <a href="listings.html" class="btn btn-outline" style="margin-top:16px;">View all listings</a>
       </div>
 
       <div class="subscribe-info">
-        <h3>Sådan virker det</h3>
+        <h3>How it works</h3>
         <div class="info-steps">
           <div class="info-step">
             <div class="step-number">1</div>
             <div>
-              <strong>Angiv dine kriterier</strong>
-              <p>Vælg pris, størrelse, rum, område — eller modtag alle nye boliger.</p>
+              <strong>Set your criteria</strong>
+              <p>Choose price, size, rooms, area — or receive all new listings.</p>
             </div>
           </div>
           <div class="info-step">
             <div class="step-number">2</div>
             <div>
-              <strong>Vi overvåger Instagram</strong>
-              <p>Vores agent tjekker løbende nye opslag fra mæglerne i København.</p>
+              <strong>We monitor Instagram</strong>
+              <p>Our agent continuously checks new posts from brokers in Copenhagen.</p>
             </div>
           </div>
           <div class="info-step">
             <div class="step-number">3</div>
             <div>
-              <strong>Få besked med det samme</strong>
-              <p>Når en ny bolig matcher, sender vi dig en e-mail med alle detaljer.</p>
+              <strong>Get notified immediately</strong>
+              <p>When a new listing matches, we send you an email with all the details.</p>
             </div>
           </div>
         </div>
@@ -142,16 +141,17 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">BoligGram</div>
-        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+        <p class="footer-text">Properties for sale found via Instagram brokers in Copenhagen.</p>
       </div>
       <div class="footer-links">
-        <a href="index.html">Forside</a>
-        <a href="listings.html">Boliger</a>
-        <a href="map.html">Kort</a>
-        <a href="subscribe.html">Abonner</a>
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="map.html">Map</a>
+        <a href="add.html">Add Listing</a>
+        <a href="subscribe.html">Subscribe</a>
       </div>
       <div class="footer-disclaimer">
-        BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.
+        BoligGram is not affiliated with any real estate chain or Instagram. Always verify information directly with the broker.
       </div>
     </div>
   </footer>
@@ -161,7 +161,6 @@
     (async () => {
       await App.init();
 
-      // Populate neighborhoods
       const nbSelect = document.getElementById('sub-neighborhoods');
       if (nbSelect) {
         App.getUniqueValues('neighborhood').forEach(n => {
@@ -172,7 +171,6 @@
         });
       }
 
-      // Populate features
       const featContainer = document.getElementById('sub-features');
       if (featContainer) {
         App.getAllFeatures().slice(0, 12).forEach(f => {
@@ -183,7 +181,6 @@
         });
       }
 
-      // Form submission
       const form = document.getElementById('subscribe-form');
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -207,12 +204,10 @@
           subscribed_at: new Date().toISOString(),
         };
 
-        // Store locally
         const subs = JSON.parse(localStorage.getItem('bg_subscriptions') || '[]');
         subs.push(subscription);
         localStorage.setItem('bg_subscriptions', JSON.stringify(subs));
 
-        // Try sending to the agent API (if running)
         try {
           await fetch('http://localhost:5111/subscribe', {
             method: 'POST',
@@ -220,7 +215,7 @@
             body: JSON.stringify(subscription),
           });
         } catch (err) {
-          // Agent not running — that's OK, data is in localStorage
+          // Agent not running — that's OK
         }
 
         document.getElementById('subscribe-form-container').style.display = 'none';
