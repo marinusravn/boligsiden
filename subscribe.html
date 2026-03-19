@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abonner på boliger — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Forside</a>
+        <a href="listings.html">Boliger</a>
+        <a href="map.html">Kort</a>
+        <a href="subscribe.html" class="active">Abonner</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-small">
+    <h1>Få besked om nye boliger</h1>
+    <p>Tilmeld dig og modtag en e-mail, når nye boliger matcher dine kriterier</p>
+  </section>
+
+  <div class="container">
+    <section class="section" style="max-width:640px;margin:0 auto;">
+
+      <div id="subscribe-form-container">
+        <form id="subscribe-form" class="subscribe-form">
+          <div class="form-group">
+            <label for="sub-email">E-mail *</label>
+            <input type="email" id="sub-email" required placeholder="din@email.dk">
+          </div>
+
+          <h3 class="form-section-title">Dine kriterier (valgfri)</h3>
+          <p class="form-hint">Udfyld kun de felter, du vil filtrere på. Lad resten stå tomme for at modtage alle boliger.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-min-price">Min. pris (DKK)</label>
+              <input type="number" id="sub-min-price" placeholder="F.eks. 2000000" step="100000">
+            </div>
+            <div class="form-group">
+              <label for="sub-max-price">Max. pris (DKK)</label>
+              <input type="number" id="sub-max-price" placeholder="F.eks. 5000000" step="100000">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-min-area">Min. størrelse (m²)</label>
+              <input type="number" id="sub-min-area" placeholder="F.eks. 60">
+            </div>
+            <div class="form-group">
+              <label for="sub-max-area">Max. størrelse (m²)</label>
+              <input type="number" id="sub-max-area" placeholder="F.eks. 120">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-min-rooms">Min. rum</label>
+              <input type="number" id="sub-min-rooms" min="1" max="10" placeholder="F.eks. 2">
+            </div>
+            <div class="form-group">
+              <label for="sub-max-rooms">Max. rum</label>
+              <input type="number" id="sub-max-rooms" min="1" max="10" placeholder="F.eks. 4">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sub-postal">Postnumre (kommasepareret)</label>
+            <input type="text" id="sub-postal" placeholder="F.eks. 2100, 2200, 1000-1499">
+          </div>
+
+          <div class="form-group">
+            <label for="sub-neighborhoods">Områder</label>
+            <select id="sub-neighborhoods" multiple size="4">
+              <!-- Populated by JS -->
+            </select>
+            <span class="form-hint">Hold Ctrl for at vælge flere</span>
+          </div>
+
+          <div class="form-group">
+            <label>Egenskaber</label>
+            <div id="sub-features" class="feature-checkboxes">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Tilmeld</button>
+        </form>
+      </div>
+
+      <div id="subscribe-success" class="subscribe-success" style="display:none;">
+        <div class="success-icon">&#10003;</div>
+        <h2>Du er tilmeldt!</h2>
+        <p>Vi sender dig en e-mail, når nye boliger matcher dine kriterier.</p>
+        <p class="form-hint">Du kan til enhver tid afmelde dig via linket i e-mailen.</p>
+        <a href="listings.html" class="btn btn-outline" style="margin-top:16px;">Se alle boliger</a>
+      </div>
+
+      <div class="subscribe-info">
+        <h3>Sådan virker det</h3>
+        <div class="info-steps">
+          <div class="info-step">
+            <div class="step-number">1</div>
+            <div>
+              <strong>Angiv dine kriterier</strong>
+              <p>Vælg pris, størrelse, rum, område — eller modtag alle nye boliger.</p>
+            </div>
+          </div>
+          <div class="info-step">
+            <div class="step-number">2</div>
+            <div>
+              <strong>Vi overvåger Instagram</strong>
+              <p>Vores agent tjekker løbende nye opslag fra mæglerne i København.</p>
+            </div>
+          </div>
+          <div class="info-step">
+            <div class="step-number">3</div>
+            <div>
+              <strong>Få besked med det samme</strong>
+              <p>Når en ny bolig matcher, sender vi dig en e-mail med alle detaljer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Forside</a>
+        <a href="listings.html">Boliger</a>
+        <a href="map.html">Kort</a>
+        <a href="subscribe.html">Abonner</a>
+      </div>
+      <div class="footer-disclaimer">
+        BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+
+      // Populate neighborhoods
+      const nbSelect = document.getElementById('sub-neighborhoods');
+      if (nbSelect) {
+        App.getUniqueValues('neighborhood').forEach(n => {
+          const opt = document.createElement('option');
+          opt.value = n;
+          opt.textContent = n;
+          nbSelect.appendChild(opt);
+        });
+      }
+
+      // Populate features
+      const featContainer = document.getElementById('sub-features');
+      if (featContainer) {
+        App.getAllFeatures().slice(0, 12).forEach(f => {
+          const label = document.createElement('label');
+          label.className = 'feature-check-label';
+          label.innerHTML = `<input type="checkbox" value="${f.name}"> ${f.name}`;
+          featContainer.appendChild(label);
+        });
+      }
+
+      // Form submission
+      const form = document.getElementById('subscribe-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const selectedNeighborhoods = Array.from(nbSelect.selectedOptions).map(o => o.value);
+        const selectedFeatures = Array.from(document.querySelectorAll('#sub-features input:checked')).map(c => c.value);
+
+        const subscription = {
+          email: document.getElementById('sub-email').value.trim(),
+          criteria: {
+            min_price: parseInt(document.getElementById('sub-min-price').value) || null,
+            max_price: parseInt(document.getElementById('sub-max-price').value) || null,
+            min_area: parseInt(document.getElementById('sub-min-area').value) || null,
+            max_area: parseInt(document.getElementById('sub-max-area').value) || null,
+            min_rooms: parseInt(document.getElementById('sub-min-rooms').value) || null,
+            max_rooms: parseInt(document.getElementById('sub-max-rooms').value) || null,
+            postal_codes: document.getElementById('sub-postal').value.trim() || null,
+            neighborhoods: selectedNeighborhoods.length ? selectedNeighborhoods : null,
+            features: selectedFeatures.length ? selectedFeatures : null,
+          },
+          subscribed_at: new Date().toISOString(),
+        };
+
+        // Store locally
+        const subs = JSON.parse(localStorage.getItem('bg_subscriptions') || '[]');
+        subs.push(subscription);
+        localStorage.setItem('bg_subscriptions', JSON.stringify(subs));
+
+        // Try sending to the agent API (if running)
+        try {
+          await fetch('http://localhost:5111/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(subscription),
+          });
+        } catch (err) {
+          // Agent not running — that's OK, data is in localStorage
+        }
+
+        document.getElementById('subscribe-form-container').style.display = 'none';
+        document.getElementById('subscribe-success').style.display = 'block';
+      });
+    })();
+  </script>
+
+</body>
+</html>

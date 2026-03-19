@@ -70,8 +70,28 @@ const App = {
       .map(([name, count]) => ({ name, count }));
   },
 
+  matchesSearch(listing, query) {
+    if (!query) return true;
+    const q = query.toLowerCase();
+    const fields = [
+      listing.street_name, listing.house_number, listing.neighborhood,
+      listing.city, listing.postal_code, listing.brokerage_name,
+      listing.post_caption_raw, listing.property_type,
+      listing.floor_or_unit, listing.floor,
+    ];
+    const tl = listing.tinglysning;
+    if (tl) {
+      (tl.owners || []).forEach(o => fields.push(o.name));
+      fields.push(tl.property_type_tl, tl.matrikel, tl.landsejerlav, tl.municipality);
+    }
+    (listing.features || []).forEach(f => fields.push(f));
+    const haystack = fields.filter(Boolean).join(' ').toLowerCase();
+    return q.split(/\s+/).every(word => haystack.includes(word));
+  },
+
   applyFilters(filters) {
     this.filtered = this.listings.filter(l => {
+      if (filters.searchQuery && !this.matchesSearch(l, filters.searchQuery)) return false;
       if (filters.neighborhood && l.neighborhood !== filters.neighborhood) return false;
       if (filters.city && l.city !== filters.city) return false;
       if (filters.minPrice != null && (l.price_dkk == null || l.price_dkk < filters.minPrice)) return false;
@@ -378,6 +398,7 @@ const App = {
     const maxRooms = maxRoomsEl ? parseInt(maxRoomsEl.value) : null;
 
     return {
+      searchQuery: document.getElementById('search-input')?.value?.trim() || '',
       neighborhood: document.getElementById('filter-neighborhood')?.value || '',
       city: document.getElementById('filter-city')?.value || '',
       minPrice: (minPriceEl && minPrice > parseInt(minPriceEl.min)) ? minPrice : null,
@@ -406,6 +427,15 @@ const App = {
   setupListingsPage() {
     this.populateFilters();
 
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      let debounce;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => this.handleFilterChange(), 200);
+      });
+    }
+
     const filterEls = document.querySelectorAll('.filter-group select, .filter-checkbox input');
     filterEls.forEach(el => {
       el.addEventListener('change', () => this.handleFilterChange());
@@ -422,6 +452,7 @@ const App = {
     const resetBtn = document.getElementById('filter-reset');
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
         document.querySelectorAll('.filter-group select').forEach(s => s.value = '');
         document.querySelectorAll('.filter-checkbox input').forEach(c => c.checked = false);
         document.querySelectorAll('.range-input').forEach(r => {
