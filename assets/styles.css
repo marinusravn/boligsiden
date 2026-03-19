@@ -1144,6 +1144,49 @@ img {
   }
 }
 
+/* Tinglysning mortgage cards */
+.tl-mortgages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tl-mortgage-card {
+  background: #f8f9fb;
+  border: 1px solid #e8e8ed;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.tl-mortgage-type {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.tl-mortgage-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.tl-mortgage-amount {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.tl-mortgage-rate {
+  color: var(--color-text-muted);
+}
+
+.tl-mortgage-creditor {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
 @media (max-width: 480px) {
   .hero {
     padding: 40px 16px;

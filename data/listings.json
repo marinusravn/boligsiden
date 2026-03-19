@@ -301,6 +301,64 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Sebastian Engelsted Hansen",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "3304",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 8050000,
+      "land_value_dkk": 782000,
+      "valuation_date": "2020-10-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "41.000 DKK",
+          "interest_rate": "0",
+          "interest_type": "uden",
+          "creditors": [
+            "E/F Nyborggade 4"
+          ],
+          "date": "10.05.2019"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "1.000.000 DKK",
+          "interest_rate": "0.9604",
+          "interest_type": "variabel",
+          "creditors": [
+            "REALKREDIT DANMARK A/S"
+          ],
+          "date": "15.06.2015"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "1.909.000 DKK",
+          "interest_rate": "-0.4552",
+          "interest_type": "variabel",
+          "creditors": [
+            "REALKREDIT DANMARK A/S"
+          ],
+          "date": "15.08.2019"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "3.074.000 DKK",
+          "interest_rate": "3.0348",
+          "interest_type": "variabel",
+          "creditors": [
+            "REALKREDIT DANMARK A/S"
+          ],
+          "date": "18.03.2024"
+        }
+      ],
+      "total_debt_dkk": 6024000
     }
   },
   {
@@ -447,6 +505,69 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Person med navne og adressebeskyttelse",
+          "share": "1/2"
+        },
+        {
+          "name": "Person med navne og adressebeskyttelse",
+          "share": "1/2"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "415",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 4377000,
+      "land_value_dkk": 2801000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Ejerpantebrev",
+          "principal": "3.600 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Boet efter Hanne Birgit Nielsen"
+          ],
+          "date": "15.11.1971"
+        },
+        {
+          "type": "Ejerpantebrev",
+          "principal": "46.400 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Person med navne og adressebeskyttelse",
+            "Person med navne og adressebeskyttelse"
+          ],
+          "date": "15.11.1971"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "3.750.000 DKK",
+          "interest_rate": "-0.2939",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "26.11.2020"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "1.068.000 DKK",
+          "interest_rate": "4",
+          "interest_type": "fast",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "02.03.2023"
+        }
+      ],
+      "total_debt_dkk": 4868000
     }
   },
   {
@@ -596,6 +717,54 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Josefine Nordmark Nielsen",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "1060",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 3096000,
+      "land_value_dkk": 1925000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Ejerpantebrev",
+          "principal": "20.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Josefine Nordmark Nielsen"
+          ],
+          "date": "16.09.1986"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "2.980.000 DKK",
+          "interest_rate": "3.5",
+          "interest_type": "fast",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "30.05.2022"
+        },
+        {
+          "type": "Ejerpantebrev",
+          "principal": "236.000 DKK",
+          "interest_rate": "0",
+          "interest_type": "variabel",
+          "creditors": [
+            "Josefine Nordmark Nielsen"
+          ],
+          "date": "01.06.2022"
+        }
+      ],
+      "total_debt_dkk": 3236000
     }
   },
   {
@@ -745,6 +914,78 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Nicolai Lerche",
+          "share": "0/1"
+        },
+        {
+          "name": "Nicolai Lerche",
+          "share": "0/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "5300",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 5551000,
+      "land_value_dkk": 4446000,
+      "valuation_date": "2022-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "0 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Byrde lyst pantstiftende"
+          ],
+          "date": "15.11.1926"
+        },
+        {
+          "type": "Andet pantebrev",
+          "principal": "30.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "E/F Lyngbyvangen"
+          ],
+          "date": "07.11.2006"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "2.034.000 DKK",
+          "interest_rate": "-0.289",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "09.08.2021"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "1.426.000 DKK",
+          "interest_rate": "0.5839",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "01.02.2013"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "520.000 DKK",
+          "interest_rate": "1.2601",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "01.02.2013"
+        }
+      ],
+      "total_debt_dkk": 4010000
     }
   },
   {
@@ -900,6 +1141,69 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Titan Ejendomme ApS",
+          "share": "1/2"
+        },
+        {
+          "name": "Motivo ApS",
+          "share": "1/2"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "1242",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 3139000,
+      "land_value_dkk": 2487000,
+      "valuation_date": "2022-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "0 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Byrde lyst pantstiftende"
+          ],
+          "date": "29.07.1907"
+        },
+        {
+          "type": "Andet pantebrev",
+          "principal": "0 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Byrde lyst pantstiftende"
+          ],
+          "date": "29.07.1907"
+        },
+        {
+          "type": "Ejerpantebrev",
+          "principal": "5.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Anne Bjerregaard"
+          ],
+          "date": "28.08.1979"
+        },
+        {
+          "type": "Ejerpantebrev",
+          "principal": "28.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Motivo ApS",
+            "Titan Ejendomme ApS"
+          ],
+          "date": "28.08.1979"
+        }
+      ],
+      "total_debt_dkk": 33000
     }
   },
   {
@@ -1177,6 +1481,44 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Person med navne og adressebeskyttelse",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "407",
+      "landsejerlav": "Øster Kvarter, København",
+      "property_value_dkk": 4087000,
+      "land_value_dkk": 2700000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Ejerpantebrev",
+          "principal": "45.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Person med navne og adressebeskyttelse"
+          ],
+          "date": "22.01.2002"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "3.780.000 DKK",
+          "interest_rate": "2.982375",
+          "interest_type": "fast",
+          "creditors": [
+            "NORDEA KREDIT REALKREDITAKTIESELSKAB"
+          ],
+          "date": "14.08.2024"
+        }
+      ],
+      "total_debt_dkk": 3825000
     }
   },
   {
@@ -1315,6 +1657,54 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Gustav Louis Melbrandt Lefeldt",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "14di",
+      "landsejerlav": "Frederiksberg",
+      "property_value_dkk": 2900000,
+      "land_value_dkk": 1380000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Frederiksberg Kommune",
+      "mortgages": [
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "1.884.000 DKK",
+          "interest_rate": "5",
+          "interest_type": "fast",
+          "creditors": [
+            "Jyske Realkredit A/S"
+          ],
+          "date": "20.01.2023"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "525.000 DKK",
+          "interest_rate": "0",
+          "interest_type": "uden",
+          "creditors": [
+            "Morten Thorup Holcken"
+          ],
+          "date": "29.09.2021"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "1.112.000 DKK",
+          "interest_rate": "0.5485",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "01.07.2022"
+        }
+      ],
+      "total_debt_dkk": 3521000
     }
   },
   {
@@ -1452,6 +1842,38 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Frederik Ole Heissel Lønhart",
+          "share": "1/2"
+        },
+        {
+          "name": "Maria Heissel Lønhart",
+          "share": "1/2"
+        }
+      ],
+      "property_type_tl": "Parcel",
+      "matrikel": "687",
+      "landsejerlav": "Østervold Kvarter, København",
+      "property_value_dkk": 10103000,
+      "land_value_dkk": 5948000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Pantebrev",
+          "principal": "8.400.000 DKK",
+          "interest_rate": "3.4",
+          "interest_type": "variabel",
+          "creditors": [
+            "RINGKJØBING LANDBOBANK. AKTIESELSKAB"
+          ],
+          "date": "29.08.2025"
+        }
+      ],
+      "total_debt_dkk": 8400000
     }
   },
   {
@@ -1589,6 +2011,48 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Christine Brochdorf",
+          "share": "1/2"
+        },
+        {
+          "name": "Lau Svendsen-Tune",
+          "share": "1/2"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "506",
+      "landsejerlav": "Sankt Annæ Vester Kvarter, København",
+      "property_value_dkk": 5550000,
+      "land_value_dkk": 3857000,
+      "valuation_date": "2022-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "281.000 DKK",
+          "interest_rate": "1.541381",
+          "interest_type": "fast",
+          "creditors": [
+            "NORDEA KREDIT                     REALKREDITAKTIESELSKAB"
+          ],
+          "date": "11.03.2011"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "1.735.000 DKK",
+          "interest_rate": "1.1",
+          "interest_type": "variabel",
+          "creditors": [
+            "RINGKJØBING LANDBOBANK. AKTIESELSKAB"
+          ],
+          "date": "17.05.2018"
+        }
+      ],
+      "total_debt_dkk": 2016000
     }
   },
   {
@@ -1727,6 +2191,44 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Nicolas Beer",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "5307",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 1627000,
+      "land_value_dkk": 1097000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "50.000 DKK",
+          "interest_rate": "0",
+          "interest_type": "uden",
+          "creditors": [
+            "E/F Bechgaardsgade 10"
+          ],
+          "date": "29.01.2013"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "1.939.000 DKK",
+          "interest_rate": "4",
+          "interest_type": "fast",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "11.11.2024"
+        }
+      ],
+      "total_debt_dkk": 1989000
     }
   },
   {
@@ -2012,6 +2514,54 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Caroline Grumstrup Hjuler",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "11ge",
+      "landsejerlav": "Frederiksberg",
+      "property_value_dkk": 3185000,
+      "land_value_dkk": 2152000,
+      "valuation_date": "2022-01-01",
+      "municipality": "Frederiksberg Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "40.000 DKK",
+          "interest_rate": "0",
+          "interest_type": "uden",
+          "creditors": [
+            "E/F Rolfsvej 29"
+          ],
+          "date": "23.10.2018"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "929.000 DKK",
+          "interest_rate": "0.64",
+          "interest_type": "variabel",
+          "creditors": [
+            "NORDEA KREDIT REALKREDITAKTIESELSKAB"
+          ],
+          "date": "23.11.2022"
+        },
+        {
+          "type": "Afgiftspantebrev",
+          "principal": "334.000 DKK",
+          "interest_rate": "1",
+          "interest_type": "fast",
+          "creditors": [
+            "NORDEA KREDIT REALKREDITAKTIESELSKAB"
+          ],
+          "date": "25.10.2019"
+        }
+      ],
+      "total_debt_dkk": 1303000
     }
   },
   {
@@ -2150,6 +2700,58 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Mathias Amstrup Thrane",
+          "share": "1/2"
+        },
+        {
+          "name": "Signe Bille",
+          "share": "1/2"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "3983",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 2850000,
+      "land_value_dkk": 1882000,
+      "valuation_date": "2022-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "20.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Byrde lyst pantstiftende"
+          ],
+          "date": "09.11.1994"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "1.442.000 DKK",
+          "interest_rate": "0",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "16.05.2022"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "225.000 DKK",
+          "interest_rate": "0.5688",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "01.09.2022"
+        }
+      ],
+      "total_debt_dkk": 1687000
     }
   },
   {
@@ -2292,6 +2894,44 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Kristian Esmann Nauntofte",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "2523",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 2331000,
+      "land_value_dkk": 1618000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "35.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Ejerforeningen"
+          ],
+          "date": "17.11.1999"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "1.493.000 DKK",
+          "interest_rate": "0.011",
+          "interest_type": "variabel",
+          "creditors": [
+            "TOTALKREDIT A/S"
+          ],
+          "date": "07.03.2016"
+        }
+      ],
+      "total_debt_dkk": 1528000
     }
   },
   {
@@ -2429,6 +3069,44 @@
           "weight": 0.15
         }
       ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Jens Egon Dahl",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "5780",
+      "landsejerlav": "Udenbys Klædebo Kvarter, København",
+      "property_value_dkk": 2698000,
+      "land_value_dkk": 2182000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "42.050 DKK",
+          "interest_rate": "0",
+          "interest_type": "uden",
+          "creditors": [
+            "E/F Victor Bendix Gade 16-24"
+          ],
+          "date": "31.01.2017"
+        },
+        {
+          "type": "Pantebrev",
+          "principal": "1.508.000 DKK",
+          "interest_rate": "0.2",
+          "interest_type": "variabel",
+          "creditors": [
+            "DANSKE BANK A/S"
+          ],
+          "date": "20.06.2019"
+        }
+      ],
+      "total_debt_dkk": 1550050
     }
   }
 ]
