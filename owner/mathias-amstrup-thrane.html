@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathias Amstrup Thrane — Ejerprofil — BoligGram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .owner-hero {
+            text-align: center;
+            padding: 48px 20px 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .owner-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.4);
+            margin: 0 auto 16px;
+            display: block;
+            object-fit: cover;
+        }
+        .owner-hero h1 {
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+            color: white;
+        }
+        .owner-hero .owner-title {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-bottom: 16px;
+        }
+        .owner-socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+        .owner-social-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.15s, opacity 0.15s;
+        }
+        .owner-social-btn:hover {
+            transform: translateY(-1px);
+            opacity: 0.9;
+        }
+        .linkedin-btn {
+            background: white;
+            color: #0a66c2;
+        }
+        .facebook-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .website-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .imdb-btn {
+            background: #f5c518;
+            color: #1a1a2e;
+        }
+        .owner-content {
+            max-width: 680px;
+            margin: -20px auto 40px;
+            padding: 0 20px;
+        }
+        .owner-bio-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #333;
+        }
+        .owner-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .owner-section h3 {
+            font-size: 0.95rem;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .owner-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .timeline-item {
+            padding-left: 16px;
+            border-left: 3px solid #667eea;
+        }
+        .timeline-role {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: #1a1a2e;
+        }
+        .timeline-company {
+            font-size: 0.82rem;
+            color: #555;
+        }
+        .timeline-period {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 2px;
+        }
+        .owner-edu-text {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.6;
+        }
+        .owner-properties {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .owner-property-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 16px;
+            background: #f6f7f9;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #1a1a2e;
+            transition: background 0.15s;
+        }
+        .owner-property-card:hover {
+            background: #eef0f4;
+        }
+        .owner-prop-addr {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .owner-prop-details {
+            display: flex;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .owner-note {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.78rem;
+            color: #795548;
+            margin-bottom: 20px;
+        }
+        .owner-disclaimer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #aaa;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: white;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: #555;
+            text-decoration: none;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        .back-link:hover {
+            color: #1a1a2e;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="site-logo">BoligGram</a>
+        <nav class="site-nav">
+            <a href="../listings.html">Boliger</a>
+            <a href="../map.html">Kort</a>
+            <a href="../subscribe.html">Notifikationer</a>
+        </nav>
+    </div>
+</header>
+
+<div class="owner-hero">
+    <img src="https://ui-avatars.com/api/?name=Mathias%20Amstrup%20Thrane&size=200&background=6C5CE7&color=fff&bold=true&font-size=0.4" alt="Mathias Amstrup Thrane" class="owner-avatar">
+    <h1>Mathias Amstrup Thrane</h1>
+    <div class="owner-title">Instruktør & Manuskriptforfatter</div>
+    <div class="owner-socials">
+        <a href="https://www.imdb.com/name/nm11150692/" target="_blank" rel="noopener" class="owner-social-btn imdb-btn">IMDb-profil</a><a href="https://www.facebook.com/search/people/?q=Mathias%20Amstrup%20Thrane" target="_blank" rel="noopener" class="owner-social-btn facebook-btn">Søg på Facebook</a>
+    </div>
+</div>
+
+<div class="owner-content">
+    
+
+    <div class="owner-bio-card">
+        Mathias er instruktør og manuskriptforfatter med speciale i dansk tv-produktion. Han er bedst kendt for at instruere 172 episoder af børne­serien 'Klassen' på DR Ultra.
+    </div>
+
+    <div class="owner-section"><h3>Karriere</h3><div class="owner-timeline"><div class="timeline-item">
+                <div class="timeline-role">Instruktør</div>
+                <div class="timeline-company">Klassen (DR Ultra)</div>
+                <div class="timeline-period">2020 – 2024, 172 episoder</div>
+            </div><div class="timeline-item">
+                <div class="timeline-role">Manuskriptforfatter</div>
+                <div class="timeline-company">Når mænd slår kvinder ihjel (TV)</div>
+                <div class="timeline-period">2019</div>
+            </div><div class="timeline-item">
+                <div class="timeline-role">2nd Unit Director</div>
+                <div class="timeline-company">En anden uden mig (kortfilm)</div>
+                <div class="timeline-period">2024</div>
+            </div></div></div>
+    <div class="owner-section"><h3>Uddannelse</h3><p class="owner-edu-text">Film og TV-produktion.</p></div>
+    <div class="owner-section"><h3>Ejendomme</h3><div class="owner-properties"><a href="../listing/danbolig-008.html" class="owner-property-card">
+                <div class="owner-prop-addr">P.D. Løvs Allé 9A, 4. th., 2200 København N</div>
+                <div class="owner-prop-details">
+                    <span>4.895.000 kr.</span>
+                    <span>49 m²</span>
+                </div>
+            </a></div></div>
+
+    <div class="owner-disclaimer">
+        Alle oplysninger er indsamlet fra offentligt tilgængelige kilder (tinglysning.dk, LinkedIn, Google).
+        BoligGram er ikke ansvarlig for rigtigheden af disse data.
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">BoligGram</div>
+            <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+        </div>
+        <div class="footer-links">
+            <a href="../index.html">Forside</a>
+            <a href="../listings.html">Alle boliger</a>
+            <a href="../map.html">Kort</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

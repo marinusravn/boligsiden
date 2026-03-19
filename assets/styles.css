@@ -1430,6 +1430,11 @@ img {
   color: #1877f2;
 }
 
+.tl-social-link.profile-link {
+  background: #f0eafe;
+  color: #6C5CE7;
+}
+
 .tl-divider {
   border: none;
   border-top: 1px solid #eaeaea;
