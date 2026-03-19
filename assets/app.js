@@ -177,6 +177,7 @@ const App = {
           <div class="card-address">${listing.street_name || ''} ${listing.house_number || ''}${(listing.floor_or_unit || listing.floor) ? ', ' + (listing.floor_or_unit || listing.floor) : ''}</div>
           <div class="card-neighborhood">${listing.postal_code || ''} ${listing.city || ''} \u2014 ${listing.neighborhood || ''}</div>
           ${(listing.features && listing.features.length > 0) ? `<div class="card-features">${listing.features.slice(0, 4).map(f => `<span class="feature-tag">${f}</span>`).join('')}${listing.features.length > 4 ? `<span class="feature-tag feature-more">+${listing.features.length - 4}</span>` : ''}</div>` : ''}
+          ${listing.rating && listing.rating.overall_score ? `<div class="card-rating" onclick="event.stopPropagation(); window.location.href='${base}listing/${listing.listing_id}-rating.html';"><span class="card-rating-score" style="color:${App.scoreColor(listing.rating.overall_score)};">${listing.rating.overall_score}</span><span class="card-rating-label">${App.scoreLabel(listing.rating.overall_score)}</span><span class="card-rating-link">Se vurdering &#8594;</span></div>` : ''}
           <div class="card-footer">
             <span class="card-broker">${listing.brokerage_name || ''}</span>
             <span class="card-date">${date || ''}</span>
@@ -184,6 +185,23 @@ const App = {
         </div>
       </div>
     `;
+  },
+
+  scoreColor(score) {
+    if (!score) return '#999';
+    if (score >= 4.0) return '#27ae60';
+    if (score >= 3.0) return '#f5a623';
+    return '#c0392b';
+  },
+
+  scoreLabel(score) {
+    if (!score) return 'Ikke vurderet';
+    if (score >= 4.5) return 'Fremragende';
+    if (score >= 4.0) return 'Meget god';
+    if (score >= 3.5) return 'God';
+    if (score >= 3.0) return 'Gennemsnitlig';
+    if (score >= 2.0) return 'Under gennemsnit';
+    return 'Lav';
   },
 
   translatePropertyType(type) {

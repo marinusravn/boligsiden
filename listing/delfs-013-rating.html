@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vurdering — Rolfsvej 29, 1. tv. — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .rating-hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .rating-hero h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
+    .rating-hero .rating-address { opacity: 0.85; font-size: 1rem; margin-bottom: 20px; }
+    .rating-overall {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.15);
+      border-radius: var(--radius-xl);
+      padding: 16px 32px;
+    }
+    .rating-overall-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .rating-overall-info { text-align: left; }
+    .rating-overall-label { font-size: 1rem; font-weight: 600; }
+    .rating-overall-subtitle { font-size: 0.8rem; opacity: 0.75; }
+    .rating-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    .rating-criterion {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .criterion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .criterion-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .criterion-weight {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-left: 6px;
+    }
+    .criterion-score {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    .criterion-bar-bg {
+      height: 8px;
+      background: var(--color-border-light);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .criterion-bar {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+    .criterion-desc {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 4px;
+    }
+    .criterion-detail {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+    .rating-context {
+      background: var(--color-accent);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .rating-context h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .price-comparison {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .price-col {
+      text-align: center;
+    }
+    .price-col-value {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-text);
+    }
+    .price-col-label {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+    .price-source {
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+      text-align: center;
+    }
+    .rating-disclaimer {
+      background: var(--color-tag-bg);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-top: 24px;
+    }
+    @media (max-width: 600px) {
+      .price-comparison { grid-template-columns: 1fr; gap: 12px; }
+      .rating-overall { flex-direction: column; padding: 16px 24px; }
+      .rating-overall-info { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="rating-hero">
+    <h1>BoligGram Vurdering</h1>
+    <div class="rating-address">Rolfsvej 29, 1. tv. — 2000 Frederiksberg</div>
+    <div class="rating-overall">
+      <span class="rating-overall-number">3.6</span>
+      <div class="rating-overall-info">
+        <div class="rating-overall-label">God</div>
+        <div class="rating-overall-subtitle">Samlet vurdering ud af 5</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rating-content">
+    <div style="margin-bottom:24px;">
+      <a href="delfs-013.html" class="detail-back">&#8592; Tilbage til bolig</a>
+    </div>
+
+    
+
+    <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;">Detaljeret vurdering</h2>
+    
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Prisvurdering</span>
+              <span class="criterion-weight">(30%)</span>
+            </div>
+            <span class="criterion-score" style="color:#999;">—/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:0%;background:#999;"></div>
+          </div>
+          <p class="criterion-desc">Kvadratmeterpris vs. områdets gennemsnit (Boligsiden jan. 2026)</p>
+          <p class="criterion-detail">Pris eller areal ikke tilgængeligt</p>
+        </div>
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Beliggenhed</span>
+              <span class="criterion-weight">(15%)</span>
+            </div>
+            <span class="criterion-score" style="color:#27ae60;">4.3/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:86%;background:#27ae60;"></div>
+          </div>
+          <p class="criterion-desc">Kvarterets popularitet og beliggenhed</p>
+          <p class="criterion-detail">Frederiksberg</p>
+        </div>
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Altan & uderum</span>
+              <span class="criterion-weight">(15%)</span>
+            </div>
+            <span class="criterion-score" style="color:#f5a623;">3.5/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:70%;background:#f5a623;"></div>
+          </div>
+          <p class="criterion-desc">Altan, have, terrasse, orientering</p>
+          <p class="criterion-detail">Altan, Sydvendt</p>
+        </div>
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Køkken</span>
+              <span class="criterion-weight">(12%)</span>
+            </div>
+            <span class="criterion-score" style="color:#27ae60;">4.0/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:80%;background:#27ae60;"></div>
+          </div>
+          <p class="criterion-desc">Køkkenets stand og kvalitet</p>
+          <p class="criterion-detail">Nyere køkken</p>
+        </div>
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Stand & renovering</span>
+              <span class="criterion-weight">(13%)</span>
+            </div>
+            <span class="criterion-score" style="color:#f5a623;">3.5/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:70%;background:#f5a623;"></div>
+          </div>
+          <p class="criterion-desc">Boligens generelle stand og vedligeholdelse</p>
+          <p class="criterion-detail">Højt til loftet, Lysindfald, Gulvvarme</p>
+        </div>
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Energimærke</span>
+              <span class="criterion-weight">(7%)</span>
+            </div>
+            <span class="criterion-score" style="color:#999;">—/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:0%;background:#999;"></div>
+          </div>
+          <p class="criterion-desc">Energieffektivitet</p>
+          <p class="criterion-detail">Energimærke ikke oplyst</p>
+        </div>
+        <div class="rating-criterion">
+          <div class="criterion-header">
+            <div>
+              <span class="criterion-label">Faciliteter</span>
+              <span class="criterion-weight">(8%)</span>
+            </div>
+            <span class="criterion-score" style="color:#c0392b;">2.0/5</span>
+          </div>
+          <div class="criterion-bar-bg">
+            <div class="criterion-bar" style="width:40%;background:#c0392b;"></div>
+          </div>
+          <p class="criterion-desc">Elevator, parkering, vaskemaskine m.m.</p>
+          <p class="criterion-detail">Ingen ekstra faciliteter nævnt</p>
+        </div>
+
+    <div class="rating-disclaimer">
+      <strong>Bemærk:</strong> Denne vurdering er automatisk genereret baseret på data fra Instagram-opslag
+      og gennemsnitlige kvadratmeterpriser fra Boligsiden (jan. 2026). Vurderingen er vejledende og
+      erstatter ikke en professionel vurdering. Verificér altid oplysninger direkte hos mægleren.
+    </div>
+
+    <div style="margin-top:24px;">
+      <a href="delfs-013.html" class="btn btn-primary">Se boligdetaljer</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+      </div>
+      <div class="footer-disclaimer">BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.</div>
+    </div>
+  </footer>
+</body>
+</html>

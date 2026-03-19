@@ -538,6 +538,86 @@ img {
   font-size: 0.8rem;
 }
 
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  background: var(--color-tag-bg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.card-rating:hover {
+  background: var(--color-accent);
+}
+
+.card-rating-score {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.card-rating-label {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.card-rating-stars {
+  margin-left: auto;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.card-rating-link {
+  font-size: 0.68rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.detail-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.detail-rating-badge:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-rating-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.detail-rating-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-rating-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.detail-rating-cta {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
