@@ -108,6 +108,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.8,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 2.5,
+          "detail": "Herskabelig",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 2.5,
+          "detail": "Herskabelig",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -219,6 +260,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.4,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -322,6 +404,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 1.5,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.9,
+          "detail": "98 m²",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.3,
+          "detail": "Højt prisleje",
+          "weight": 0.15
         }
       ]
     }
@@ -432,6 +555,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.4,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -538,6 +702,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 2.0,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 2.5,
+          "detail": "Herskabelig",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 3.5,
+          "detail": "Herskabelig, Stor bolig (136 m²)",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.3,
+          "detail": "Højt prisleje",
+          "weight": 0.15
         }
       ]
     }
@@ -654,6 +859,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.6,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 2.1,
+          "detail": "Elevator, Udsigt",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -753,6 +999,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.9,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 2.0,
+          "detail": "Nyere køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 2.5,
+          "detail": "Stor bolig (162 m²)",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 2.4000000000000004,
+          "detail": "Elevator, Premium prisleje",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -847,6 +1134,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 1.7,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 2.4,
+          "detail": "Gulvvarme",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.3,
+          "detail": "Højt prisleje",
+          "weight": 0.15
         }
       ]
     }
@@ -946,6 +1274,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.4,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -1040,6 +1409,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 2.0,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 3.5,
+          "detail": "Snedkerkøkken, Nyere køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
         }
       ]
     }
@@ -1138,6 +1548,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 1.4,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -1233,6 +1684,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 1.4,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
         }
       ]
     }
@@ -1337,6 +1829,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 2.8,
+      "luxury_label": "Komfort",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 2.0,
+          "detail": "Eksklusiv",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 4.6,
+          "detail": "Plankegulve, Stuk, Herskabelig, Højt til loftet",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 4.7,
+          "detail": "Højt til loftet, Herskabelig, Stor bolig (155 m²)",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.5,
+          "detail": "Udsigt",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -1438,6 +1971,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 2.1,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 2.0,
+          "detail": "Nyere køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 2.4,
+          "detail": "Gulvvarme",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 2.1,
+          "detail": "Højt til loftet",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 2.7,
+          "detail": "Højt til loftet",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -1533,6 +2107,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 1.4,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
         }
       ]
     }
@@ -1636,6 +2251,47 @@
           "weight": 0.08
         }
       ]
+    },
+    "luxury": {
+      "luxury_score": 2.0,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 3.5,
+          "detail": "Snedkerkøkken, Nyere køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.5,
+          "detail": "Standard rumforhold",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
+        }
+      ]
     }
   },
   {
@@ -1730,6 +2386,47 @@
           "score": 2.0,
           "detail": "Ingen ekstra faciliteter nævnt",
           "weight": 0.08
+        }
+      ]
+    },
+    "luxury": {
+      "luxury_score": 1.5,
+      "luxury_label": "Standard",
+      "luxury_criteria": [
+        {
+          "key": "lux_kitchen",
+          "label": "Køkken",
+          "score": 1.5,
+          "detail": "Standard køkken",
+          "weight": 0.3
+        },
+        {
+          "key": "lux_bathroom",
+          "label": "Badeværelse",
+          "score": 1.5,
+          "detail": "Standard badeværelse",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_materials",
+          "label": "Materialer",
+          "score": 1.5,
+          "detail": "Standard materialer",
+          "weight": 0.2
+        },
+        {
+          "key": "lux_space",
+          "label": "Rum & højde",
+          "score": 1.9,
+          "detail": "83 m²",
+          "weight": 0.15
+        },
+        {
+          "key": "lux_exclusive",
+          "label": "Eksklusivitet",
+          "score": 1.0,
+          "detail": "Standard",
+          "weight": 0.15
         }
       ]
     }

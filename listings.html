@@ -46,34 +46,36 @@
               <option value="">Alle byer</option>
             </select>
           </div>
-          <div class="filter-group">
-            <label for="filter-min-price">Min. pris</label>
-            <input type="number" id="filter-min-price" placeholder="F.eks. 2000000" step="100000">
-          </div>
-          <div class="filter-group">
-            <label for="filter-max-price">Maks. pris</label>
-            <input type="number" id="filter-max-price" placeholder="F.eks. 10000000" step="100000">
+          <div class="filter-group filter-group-wide">
+            <label>Pris <span class="range-values" id="price-range-label"></span></label>
+            <div class="range-slider-wrap">
+              <input type="range" id="filter-min-price" class="range-input range-input-min" min="0" max="15000000" step="100000" value="0">
+              <input type="range" id="filter-max-price" class="range-input range-input-max" min="0" max="15000000" step="100000" value="15000000">
+              <div class="range-track"><div class="range-fill" id="price-range-fill"></div></div>
+            </div>
           </div>
         </div>
         <div class="filter-row" style="margin-top: 12px;">
           <div class="filter-group">
-            <label for="filter-min-area">Min. m²</label>
-            <input type="number" id="filter-min-area" placeholder="F.eks. 50" step="5">
+            <label>Størrelse <span class="range-values" id="area-range-label"></span></label>
+            <div class="range-slider-wrap">
+              <input type="range" id="filter-min-area" class="range-input range-input-min" min="0" max="200" step="5" value="0">
+              <input type="range" id="filter-max-area" class="range-input range-input-max" min="0" max="200" step="5" value="200">
+              <div class="range-track"><div class="range-fill" id="area-range-fill"></div></div>
+            </div>
           </div>
           <div class="filter-group">
-            <label for="filter-max-area">Maks. m²</label>
-            <input type="number" id="filter-max-area" placeholder="F.eks. 150" step="5">
+            <label>Værelser <span class="range-values" id="rooms-range-label"></span></label>
+            <div class="range-slider-wrap">
+              <input type="range" id="filter-min-rooms" class="range-input range-input-min" min="1" max="6" step="1" value="1">
+              <input type="range" id="filter-max-rooms" class="range-input range-input-max" min="1" max="6" step="1" value="6">
+              <div class="range-track"><div class="range-fill" id="rooms-range-fill"></div></div>
+            </div>
           </div>
           <div class="filter-group">
             <label for="filter-type">Boligtype</label>
             <select id="filter-type">
               <option value="">Alle typer</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label for="filter-rooms">Værelser</label>
-            <select id="filter-rooms">
-              <option value="">Alle</option>
             </select>
           </div>
           <div class="filter-group">

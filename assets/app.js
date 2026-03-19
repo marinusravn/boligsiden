@@ -74,13 +74,14 @@ const App = {
     this.filtered = this.listings.filter(l => {
       if (filters.neighborhood && l.neighborhood !== filters.neighborhood) return false;
       if (filters.city && l.city !== filters.city) return false;
-      if (filters.minPrice && (l.price_dkk == null || l.price_dkk < filters.minPrice)) return false;
-      if (filters.maxPrice && (l.price_dkk == null || l.price_dkk > filters.maxPrice)) return false;
+      if (filters.minPrice != null && (l.price_dkk == null || l.price_dkk < filters.minPrice)) return false;
+      if (filters.maxPrice != null && (l.price_dkk == null || l.price_dkk > filters.maxPrice)) return false;
       const area = this.getArea(l);
-      if (filters.minArea && (area == null || area < filters.minArea)) return false;
-      if (filters.maxArea && (area == null || area > filters.maxArea)) return false;
+      if (filters.minArea != null && (area == null || area < filters.minArea)) return false;
+      if (filters.maxArea != null && (area == null || area > filters.maxArea)) return false;
       if (filters.propertyType && l.property_type !== filters.propertyType) return false;
-      if (filters.rooms && l.rooms !== parseInt(filters.rooms)) return false;
+      if (filters.minRooms != null && (l.rooms == null || l.rooms < filters.minRooms)) return false;
+      if (filters.maxRooms != null && (l.rooms == null || l.rooms > filters.maxRooms)) return false;
       if (filters.brokerage && l.brokerage_name !== filters.brokerage) return false;
       if (filters.onlyWithPrice && l.price_dkk == null) return false;
       if (filters.onlyWithArea && this.getArea(l) == null) return false;
@@ -177,7 +178,7 @@ const App = {
           <div class="card-address">${listing.street_name || ''} ${listing.house_number || ''}${(listing.floor_or_unit || listing.floor) ? ', ' + (listing.floor_or_unit || listing.floor) : ''}</div>
           <div class="card-neighborhood">${listing.postal_code || ''} ${listing.city || ''} \u2014 ${listing.neighborhood || ''}</div>
           ${(listing.features && listing.features.length > 0) ? `<div class="card-features">${listing.features.slice(0, 4).map(f => `<span class="feature-tag">${f}</span>`).join('')}${listing.features.length > 4 ? `<span class="feature-tag feature-more">+${listing.features.length - 4}</span>` : ''}</div>` : ''}
-          ${listing.rating && listing.rating.overall_score ? `<div class="card-rating" onclick="event.stopPropagation(); window.location.href='${base}listing/${listing.listing_id}-rating.html';"><span class="card-rating-score" style="color:${App.scoreColor(listing.rating.overall_score)};">${listing.rating.overall_score}</span><span class="card-rating-label">${App.scoreLabel(listing.rating.overall_score)}</span><span class="card-rating-link">Se vurdering &#8594;</span></div>` : ''}
+          ${listing.rating && listing.rating.overall_score ? `<div class="card-rating" onclick="event.stopPropagation(); window.location.href='${base}listing/${listing.listing_id}-rating.html';"><span class="card-rating-score" style="color:${App.scoreColor(listing.rating.overall_score)};">${listing.rating.overall_score}</span><span class="card-rating-label">${App.scoreLabel(listing.rating.overall_score)}</span>${listing.luxury && listing.luxury.luxury_score ? `<span class="card-luxury">&#9830; ${listing.luxury.luxury_score}</span>` : ''}<span class="card-rating-link">Se vurdering &#8594;</span></div>` : ''}
           <div class="card-footer">
             <span class="card-broker">${listing.brokerage_name || ''}</span>
             <span class="card-date">${date || ''}</span>
@@ -243,6 +244,45 @@ const App = {
     }
   },
 
+  formatCompactPrice(val) {
+    if (val >= 1000000) return (val / 1000000).toFixed(1).replace('.0', '') + ' mio.';
+    if (val >= 1000) return Math.round(val / 1000) + 'k';
+    return String(val);
+  },
+
+  setupRangeSlider(minId, maxId, fillId, labelId, formatFn) {
+    const minEl = document.getElementById(minId);
+    const maxEl = document.getElementById(maxId);
+    const fillEl = document.getElementById(fillId);
+    const labelEl = document.getElementById(labelId);
+    if (!minEl || !maxEl) return;
+
+    const update = () => {
+      let lo = parseInt(minEl.value);
+      let hi = parseInt(maxEl.value);
+      if (lo > hi) { const tmp = lo; lo = hi; hi = tmp; minEl.value = lo; maxEl.value = hi; }
+      const rangeMin = parseInt(minEl.min);
+      const rangeMax = parseInt(minEl.max);
+      const span = rangeMax - rangeMin || 1;
+      const leftPct = ((lo - rangeMin) / span) * 100;
+      const rightPct = ((hi - rangeMin) / span) * 100;
+      if (fillEl) { fillEl.style.left = leftPct + '%'; fillEl.style.width = (rightPct - leftPct) + '%'; }
+      if (labelEl && formatFn) {
+        const atMin = lo === rangeMin;
+        const atMax = hi === rangeMax;
+        if (atMin && atMax) labelEl.textContent = '';
+        else if (atMin) labelEl.textContent = '— ' + formatFn(hi);
+        else if (atMax) labelEl.textContent = formatFn(lo) + ' —';
+        else labelEl.textContent = formatFn(lo) + ' — ' + formatFn(hi);
+      }
+      this.handleFilterChange();
+    };
+
+    minEl.addEventListener('input', update);
+    maxEl.addEventListener('input', update);
+    update();
+  },
+
   populateFilters() {
     const setOptions = (id, values, labelFn) => {
       const el = document.getElementById(id);
@@ -265,8 +305,39 @@ const App = {
     setOptions('filter-type', this.getUniqueValues('property_type'), this.translatePropertyType);
     setOptions('filter-brokerage', this.getUniqueValues('brokerage_name'));
 
-    const rooms = [...new Set(this.listings.map(l => l.rooms).filter(Boolean))].sort((a, b) => a - b);
-    setOptions('filter-rooms', rooms, v => v + ' rum');
+    const prices = this.getListingsWithPrice().map(l => l.price_dkk);
+    if (prices.length) {
+      const pMin = Math.floor(Math.min(...prices) / 500000) * 500000;
+      const pMax = Math.ceil(Math.max(...prices) / 500000) * 500000;
+      const minP = document.getElementById('filter-min-price');
+      const maxP = document.getElementById('filter-max-price');
+      if (minP) { minP.min = pMin; minP.max = pMax; minP.value = pMin; }
+      if (maxP) { maxP.min = pMin; maxP.max = pMax; maxP.value = pMax; }
+    }
+
+    const areas = this.getListingsWithArea().map(l => this.getArea(l));
+    if (areas.length) {
+      const aMin = Math.floor(Math.min(...areas) / 10) * 10;
+      const aMax = Math.ceil(Math.max(...areas) / 10) * 10;
+      const minA = document.getElementById('filter-min-area');
+      const maxA = document.getElementById('filter-max-area');
+      if (minA) { minA.min = aMin; minA.max = aMax; minA.value = aMin; }
+      if (maxA) { maxA.min = aMin; maxA.max = aMax; maxA.value = aMax; }
+    }
+
+    const rooms = this.listings.map(l => l.rooms).filter(Boolean);
+    if (rooms.length) {
+      const rMin = Math.min(...rooms);
+      const rMax = Math.max(...rooms);
+      const minR = document.getElementById('filter-min-rooms');
+      const maxR = document.getElementById('filter-max-rooms');
+      if (minR) { minR.min = rMin; minR.max = rMax; minR.value = rMin; }
+      if (maxR) { maxR.min = rMin; maxR.max = rMax; maxR.value = rMax; }
+    }
+
+    this.setupRangeSlider('filter-min-price', 'filter-max-price', 'price-range-fill', 'price-range-label', v => this.formatCompactPrice(v));
+    this.setupRangeSlider('filter-min-area', 'filter-max-area', 'area-range-fill', 'area-range-label', v => v + ' m\u00B2');
+    this.setupRangeSlider('filter-min-rooms', 'filter-max-rooms', 'rooms-range-fill', 'rooms-range-label', v => v + ' rum');
 
     const features = this.getAllFeatures();
     for (let i = 1; i <= 3; i++) {
@@ -292,15 +363,30 @@ const App = {
       const v = document.getElementById(`filter-feature-${i}`)?.value;
       if (v) features.push(v);
     }
+    const minPriceEl = document.getElementById('filter-min-price');
+    const maxPriceEl = document.getElementById('filter-max-price');
+    const minAreaEl = document.getElementById('filter-min-area');
+    const maxAreaEl = document.getElementById('filter-max-area');
+    const minRoomsEl = document.getElementById('filter-min-rooms');
+    const maxRoomsEl = document.getElementById('filter-max-rooms');
+
+    const minPrice = minPriceEl ? parseInt(minPriceEl.value) : null;
+    const maxPrice = maxPriceEl ? parseInt(maxPriceEl.value) : null;
+    const minArea = minAreaEl ? parseInt(minAreaEl.value) : null;
+    const maxArea = maxAreaEl ? parseInt(maxAreaEl.value) : null;
+    const minRooms = minRoomsEl ? parseInt(minRoomsEl.value) : null;
+    const maxRooms = maxRoomsEl ? parseInt(maxRoomsEl.value) : null;
+
     return {
       neighborhood: document.getElementById('filter-neighborhood')?.value || '',
       city: document.getElementById('filter-city')?.value || '',
-      minPrice: parseInt(document.getElementById('filter-min-price')?.value) || null,
-      maxPrice: parseInt(document.getElementById('filter-max-price')?.value) || null,
-      minArea: parseInt(document.getElementById('filter-min-area')?.value) || null,
-      maxArea: parseInt(document.getElementById('filter-max-area')?.value) || null,
+      minPrice: (minPriceEl && minPrice > parseInt(minPriceEl.min)) ? minPrice : null,
+      maxPrice: (maxPriceEl && maxPrice < parseInt(maxPriceEl.max)) ? maxPrice : null,
+      minArea: (minAreaEl && minArea > parseInt(minAreaEl.min)) ? minArea : null,
+      maxArea: (maxAreaEl && maxArea < parseInt(maxAreaEl.max)) ? maxArea : null,
+      minRooms: (minRoomsEl && minRooms > parseInt(minRoomsEl.min)) ? minRooms : null,
+      maxRooms: (maxRoomsEl && maxRooms < parseInt(maxRoomsEl.max)) ? maxRooms : null,
       propertyType: document.getElementById('filter-type')?.value || '',
-      rooms: document.getElementById('filter-rooms')?.value || '',
       brokerage: document.getElementById('filter-brokerage')?.value || '',
       onlyWithPrice: document.getElementById('filter-only-price')?.checked || false,
       onlyWithArea: document.getElementById('filter-only-area')?.checked || false,
@@ -320,12 +406,9 @@ const App = {
   setupListingsPage() {
     this.populateFilters();
 
-    const filterEls = document.querySelectorAll('.filter-group select, .filter-group input[type="number"], .filter-checkbox input');
+    const filterEls = document.querySelectorAll('.filter-group select, .filter-checkbox input');
     filterEls.forEach(el => {
       el.addEventListener('change', () => this.handleFilterChange());
-      if (el.type === 'number') {
-        el.addEventListener('input', () => this.handleFilterChange());
-      }
     });
 
     const sortEl = document.getElementById('sort-select');
@@ -340,8 +423,13 @@ const App = {
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
         document.querySelectorAll('.filter-group select').forEach(s => s.value = '');
-        document.querySelectorAll('.filter-group input[type="number"]').forEach(i => i.value = '');
         document.querySelectorAll('.filter-checkbox input').forEach(c => c.checked = false);
+        document.querySelectorAll('.range-input').forEach(r => {
+          if (r.classList.contains('range-input-min')) r.value = r.min;
+          else r.value = r.max;
+        });
+        document.querySelectorAll('.range-fill').forEach(f => { f.style.left = '0%'; f.style.width = '100%'; });
+        document.querySelectorAll('.range-values').forEach(l => l.textContent = '');
         this.filtered = [...this.listings];
         if (sortEl) {
           sortEl.value = 'newest';
