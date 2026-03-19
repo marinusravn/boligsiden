@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+        <a href="../subscribe.html">Abonner</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="detail-container">
+    <a href="../listings.html" class="detail-back">&#8592; Tilbage til oversigt</a>
+
+    <div class="detail-ig-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQJ4PuLj70S/" data-instgrm-version="14" style="width:100%; max-width:658px; margin:0 auto;">
+        <a href="https://www.instagram.com/p/DQJ4PuLj70S/" target="_blank" rel="noopener">Se opslaget på Instagram</a>
+      </blockquote>
+    </div>
+
+    <div class="detail-header">
+      <div class="detail-price no-price">Pris ikke oplyst</div>
+      <div class="detail-address"> </div>
+      <div class="detail-neighborhood"> København — Indre By</div>
+    </div>
+
+    
+    
+
+    <div class="detail-stats">
+      <div class="detail-stat">
+        <div class="detail-stat-value">—</div>
+        <div class="detail-stat-label">Størrelse</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">—</div>
+        <div class="detail-stat-label">Rum</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">Lejlighed</div>
+        <div class="detail-stat-label">Boligtype</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">active</div>
+        <div class="detail-stat-label">Status</div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Beskrivelse</h2>
+      <div class="detail-caption">Bolig til salg via Ivan Eltoft Nielsen - en af Københavns mest anerkendte ejendomsmæglere med 24 filialer på Sjælland. Se Instagram-reel for detaljer om denne bolig.</div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Detaljer</h2>
+      <div class="detail-info-grid">
+        <div class="detail-info-item"><span class="label">Adresse</span><span class="value"> </span></div>
+        <div class="detail-info-item"><span class="label">Postnr. / By</span><span class="value"> København</span></div>
+        <div class="detail-info-item"><span class="label">Område</span><span class="value">Indre By</span></div>
+        <div class="detail-info-item"><span class="label">Boligtype</span><span class="value">Ejerlejlighed</span></div>
+        <div class="detail-info-item"><span class="label">Rum</span><span class="value">—</span></div>
+        <div class="detail-info-item"><span class="label">Pris</span><span class="value">Pris ikke oplyst</span></div>
+        <div class="detail-info-item"><span class="label">Størrelse</span><span class="value">—</span></div>
+        
+        
+        
+      </div>
+    </div>
+
+    
+
+    <div class="detail-section">
+      <h2>Placering</h2>
+      <div id="detail-map" style="height:280px;border-radius:var(--radius-md);overflow:hidden;margin-bottom:8px;"></div>
+      <p style="font-size:0.75rem;color:var(--color-text-muted);font-style:italic;">Omtrentlig placering — præcis adresse kan afvige</p>
+    </div>
+
+    <div class="detail-section">
+      <h2>Mægler</h2>
+      <div class="detail-broker-card">
+        <div class="broker-avatar">IE</div>
+        <div class="broker-info">
+          <h3>Ivan Eltoft Nielsen</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-actions">
+      <a href="https://www.instagram.com/p/DQJ4PuLj70S/" target="_blank" rel="noopener" class="btn btn-primary">Se opslaget på Instagram</a>
+      <a href="https://eltoftnielsen.dk/boliger/" target="_blank" rel="noopener" class="btn btn-outline">Se hos mægler</a>
+    </div>
+
+    <div class="tl-section"><h2>Ejer & Lån</h2><div class="tl-subtitle">Data fra den offentlige tingbog via tinglysning.dk</div><p style="font-size:0.85rem;color:#666;">Ingen ejerdata fundet for denne adresse.</p><a href="https://www.tinglysning.dk/tmv/forespoergul" target="_blank" rel="noopener" class="btn btn-sm btn-outline">Se ejerskab via Tinglysning.dk &#8594;</a></div>
+
+    <div class="detail-source">
+      <strong>Kilde:</strong> Instagram-konto <a href="https://www.instagram.com/ivaneltoftnielsen/" target="_blank" rel="noopener">@ivaneltoftnielsen</a>.
+      Boligdata fra mæglerens hjemmeside.
+    </div>
+
+    <div class="related-section">
+      <h2 class="section-title">Andre boliger fra Ivan Eltoft Nielsen</h2>
+      <div class="listing-grid" id="related-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+        <a href="../subscribe.html">Abonner</a>
+      </div>
+      <div class="footer-disclaimer">BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="../assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+      const related = App.listings.filter(l => l.listing_id !== 'eltoft-001' && l.source_account_handle === 'ivaneltoftnielsen').slice(0, 3);
+      const grid = document.getElementById('related-grid');
+      if (grid) grid.innerHTML = related.map(l => App.renderCard(l)).join('');
+      App.loadInstagramEmbed();
+      setTimeout(() => App.reprocessEmbeds(), 1000);
+      
+      const mapEl = document.getElementById('detail-map');
+      if (mapEl) {
+        const m = L.map('detail-map', {zoomControl: true, scrollWheelZoom: false}).setView([55.6761, 12.5683], 14);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>',
+          maxZoom: 19,
+        }).addTo(m);
+        L.circle([55.6761, 12.5683], {radius: 200, color: "#e67e22", fillColor: "#e67e22", fillOpacity: 0.12, weight: 1.5, dashArray: "4 4"}).addTo(m); L.marker([55.6761, 12.5683], {opacity: 0.6}).addTo(m);
+      }
+      
+    })();
+  </script>
+
+</body>
+</html>
