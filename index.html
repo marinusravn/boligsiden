@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoligGram — Boliger til salg via Instagram-mæglere i København</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Forside</a>
+        <a href="listings.html">Boliger</a>
+        <a href="map.html">Kort</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Find boliger fra Københavns Instagram-mæglere</h1>
+    <p>Boliger til salg fundet via Instagram-mæglere i København. Alle opslag samlet ét sted — nemt, hurtigt og overskueligt.</p>
+    <a href="listings.html" class="btn btn-secondary btn-lg">Se alle boliger</a>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-value" id="stat-listings">—</div>
+        <div class="stat-label">Boliger</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="stat-brokers">—</div>
+        <div class="stat-label">Mæglere</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="stat-price">—</div>
+        <div class="stat-label">Med pris</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="stat-area">—</div>
+        <div class="stat-label">Med m²</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">Nyeste boliger</h2>
+      <div class="listing-grid" id="preview-grid"></div>
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="listings.html" class="btn btn-primary btn-lg">Se alle boliger</a>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Alle boliger samlet fra Instagram</h2>
+      <p>Vi indsamler boligopslag fra udvalgte ejendomsmæglere på Instagram i Københavnsområdet, så du kan finde din næste bolig på ét sted.</p>
+      <a href="listings.html" class="btn btn-primary">Udforsk boliger</a>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Mæglere</h2>
+      <div id="brokers-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;"></div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København. Data indsamlet fra offentligt tilgængelige kilder.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Forside</a>
+        <a href="listings.html">Boliger</a>
+        <a href="map.html">Kort</a>
+      </div>
+      <div class="footer-disclaimer">
+        BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Alle boligdata stammer fra offentligt tilgængelige opslag og mægler-hjemmesider. Verificér altid oplysninger direkte hos mægleren.
+      </div>
+    </div>
+  </footer>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+      App.setupHomePage();
+
+      const brokersList = document.getElementById('brokers-list');
+      if (brokersList) {
+        brokersList.innerHTML = App.accounts
+          .map(a => `
+            <div style="background: white; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 20px;">
+              <h3 style="font-size: 1rem; margin-bottom: 4px;">${a.brokerage_name}</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 8px;">${a.focus_area}</p>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 12px;">${a.office_address}</p>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <a href="${a.account_url}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Instagram</a>
+                <a href="${a.website}" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Hjemmeside</a>
+              </div>
+            </div>
+          `).join('');
+      }
+    })();
+  </script>
+
+</body>
+</html>

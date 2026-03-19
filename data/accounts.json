@@ -1,0 +1,38 @@
+[
+  {
+    "handle": "alecsanderdelfs",
+    "account_url": "https://www.instagram.com/alecsanderdelfs/",
+    "brokerage_name": "Alecsander Delfs",
+    "office_address": "Amaliegade 16C, 1256 København K",
+    "phone": "31 19 15 15",
+    "email": "ad@alecsanderdelfs.dk",
+    "website": "https://alecsanderdelfs.dk",
+    "focus_area": "København K, Indre By, Østerbro",
+    "specialization": "Liebhaverboliger",
+    "listings_found": 10
+  },
+  {
+    "handle": "danbolignoerrebro",
+    "account_url": "https://www.instagram.com/danbolignoerrebro/",
+    "brokerage_name": "danbolig Nørrebro",
+    "office_address": "Fælledvej 6, 2200 København N",
+    "phone": "35 36 14 44",
+    "email": "noerrebro@danbolig.dk",
+    "website": "https://danbolig.dk/ejendomsmaegler/norrebro/",
+    "focus_area": "Nørrebro, 2200 København N",
+    "specialization": "Ejerlejligheder på Nørrebro",
+    "listings_found": 4
+  },
+  {
+    "handle": "edcoesterbronordhavn",
+    "account_url": "https://www.instagram.com/edcoesterbronordhavn/",
+    "brokerage_name": "EDC Poul Erik Bech, Østerbro og Nordhavn",
+    "office_address": "Nordre Frihavnsgade 41, 2100 København Ø",
+    "phone": "35 25 33 88",
+    "email": null,
+    "website": "https://www.edc.dk/ejendomsmaegler/koebenhavn-oe/poul-erik-bech-oesterbro-og-nordhavn/",
+    "focus_area": "Østerbro (2100), Nordhavn (2150)",
+    "specialization": "Ejerlejligheder, villaer, andelsboliger",
+    "listings_found": 3
+  }
+]

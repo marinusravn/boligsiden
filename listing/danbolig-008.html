@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.D. Løvs Allé 9A, 4. th. — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="detail-container">
+    <a href="../listings.html" class="detail-back">&#8592; Tilbage til oversigt</a>
+
+    <div class="detail-ig-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DV8jYs6jGUE/" data-instgrm-version="14" style="width:100%; max-width:658px; margin:0 auto;">
+        <a href="https://www.instagram.com/p/DV8jYs6jGUE/" target="_blank" rel="noopener">Se opslaget på Instagram</a>
+      </blockquote>
+    </div>
+
+    <div class="detail-header">
+      <div class="detail-price">4.895.000 kr.</div>
+      <div class="detail-address">P.D. Løvs Allé 9A, 4. th.</div>
+      <div class="detail-neighborhood">2200 København N — Nørrebro</div>
+    </div>
+
+    <div class="detail-stats">
+      <div class="detail-stat">
+        <div class="detail-stat-value">49 m²</div>
+        <div class="detail-stat-label">Størrelse</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">2</div>
+        <div class="detail-stat-label">Rum</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">Ejerlejlighed</div>
+        <div class="detail-stat-label">Boligtype</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">til salg</div>
+        <div class="detail-stat-label">Status</div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Beskrivelse</h2>
+      <div class="detail-caption">NYHED! P.D. Løvs Allé 9A, 4. th. 🏡
+
+Lys og velindrettet lejlighed med klassiske detaljer og stor altan. Boligen byder på entré, stilrent køkken, rummeligt soveværelse og en opholdsstue med flot lysindfald.
+
+Lejligheden ligger på en rolig gade i det attraktive Stefansgadekvarter på Nørrebro med kort afstand til caféer, restauranter, grønne områder og metro.
+
+Pris: 4.895.000 kr.
+49 m² bolig
+2 værelser
+Byggeår: 1906
+Energimærke D
+
+Åbent hus:
+Søndag d. 22. marts kl. 13.00-13.20
+
+Kontakt os på: 35 36 14 44</div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Detaljer</h2>
+      <div class="detail-info-grid">
+        <div class="detail-info-item"><span class="label">Adresse</span><span class="value">P.D. Løvs Allé 9A, 4. th.</span></div>
+        <div class="detail-info-item"><span class="label">Postnr. / By</span><span class="value">2200 København N</span></div>
+        <div class="detail-info-item"><span class="label">Område</span><span class="value">Nørrebro</span></div>
+        <div class="detail-info-item"><span class="label">Boligtype</span><span class="value">Ejerlejlighed</span></div>
+        <div class="detail-info-item"><span class="label">Rum</span><span class="value">2</span></div>
+        <div class="detail-info-item"><span class="label">Pris</span><span class="value">4.895.000 kr.</span></div>
+        <div class="detail-info-item"><span class="label">Størrelse</span><span class="value">49 m²</span></div>
+        <div class="detail-info-item"><span class="label">Energimærke</span><span class="value">D</span></div>
+        <div class="detail-info-item"><span class="label">Byggeår</span><span class="value">1906</span></div>
+        
+      </div>
+    </div>
+
+    <div class="detail-section"><h2>Egenskaber</h2><div class="detail-features"><span class="feature-tag">Altan</span><span class="feature-tag">Lysindfald</span></div></div>
+
+    <div class="detail-section">
+      <h2>Placering</h2>
+      <div id="detail-map" style="height:280px;border-radius:var(--radius-md);overflow:hidden;margin-bottom:8px;"></div>
+      
+    </div>
+
+    <div class="detail-section">
+      <h2>Mægler</h2>
+      <div class="detail-broker-card">
+        <div class="broker-avatar">DN</div>
+        <div class="broker-info">
+          <h3>Danbolig Nørrebro</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-actions">
+      <a href="https://www.instagram.com/p/DV8jYs6jGUE/" target="_blank" rel="noopener" class="btn btn-primary">Se opslaget på Instagram</a>
+      <a href="https://danbolig.dk/ejendomsmaegler/norrebro/" target="_blank" rel="noopener" class="btn btn-outline">Se hos mægler</a>
+    </div>
+
+    <div class="detail-source">
+      <strong>Kilde:</strong> Instagram-konto <a href="https://www.instagram.com/danbolignoerrebro/" target="_blank" rel="noopener">@danbolignoerrebro</a>.
+      Boligdata fra mæglerens hjemmeside.
+    </div>
+
+    <div class="related-section">
+      <h2 class="section-title">Andre boliger fra Danbolig Nørrebro</h2>
+      <div class="listing-grid" id="related-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+      </div>
+      <div class="footer-disclaimer">BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="../assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+      const related = App.listings.filter(l => l.listing_id !== 'danbolig-008' && l.source_account_handle === 'danbolignoerrebro').slice(0, 3);
+      const grid = document.getElementById('related-grid');
+      if (grid) grid.innerHTML = related.map(l => App.renderCard(l)).join('');
+      App.loadInstagramEmbed();
+      setTimeout(() => App.reprocessEmbeds(), 1000);
+      
+      const mapEl = document.getElementById('detail-map');
+      if (mapEl) {
+        const m = L.map('detail-map', {zoomControl: true, scrollWheelZoom: false}).setView([55.697656, 12.550364], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>',
+          maxZoom: 19,
+        }).addTo(m);
+        L.marker([55.697656, 12.550364]).addTo(m);
+      }
+      
+    })();
+  </script>
+
+</body>
+</html>

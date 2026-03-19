@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alle boliger — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Forside</a>
+        <a href="listings.html" class="active">Boliger</a>
+        <a href="map.html">Kort</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-small">
+    <h1>Boliger til salg</h1>
+    <p>Gennemse alle boliger fundet via Instagram-mæglere i København</p>
+  </section>
+
+  <div class="container">
+    <section class="section">
+
+      <div class="filter-bar">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="filter-neighborhood">Område</label>
+            <select id="filter-neighborhood">
+              <option value="">Alle områder</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-city">By</label>
+            <select id="filter-city">
+              <option value="">Alle byer</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-min-price">Min. pris</label>
+            <input type="number" id="filter-min-price" placeholder="F.eks. 2000000" step="100000">
+          </div>
+          <div class="filter-group">
+            <label for="filter-max-price">Maks. pris</label>
+            <input type="number" id="filter-max-price" placeholder="F.eks. 10000000" step="100000">
+          </div>
+        </div>
+        <div class="filter-row" style="margin-top: 12px;">
+          <div class="filter-group">
+            <label for="filter-min-area">Min. m²</label>
+            <input type="number" id="filter-min-area" placeholder="F.eks. 50" step="5">
+          </div>
+          <div class="filter-group">
+            <label for="filter-max-area">Maks. m²</label>
+            <input type="number" id="filter-max-area" placeholder="F.eks. 150" step="5">
+          </div>
+          <div class="filter-group">
+            <label for="filter-type">Boligtype</label>
+            <select id="filter-type">
+              <option value="">Alle typer</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-rooms">Værelser</label>
+            <select id="filter-rooms">
+              <option value="">Alle</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-brokerage">Mægler</label>
+            <select id="filter-brokerage">
+              <option value="">Alle mæglere</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-row" style="margin-top: 12px;">
+          <div class="filter-group">
+            <label for="filter-feature-1">Egenskab</label>
+            <select id="filter-feature-1">
+              <option value="">Vælg egenskab...</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-feature-2">Egenskab</label>
+            <select id="filter-feature-2">
+              <option value="">Vælg egenskab...</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-feature-3">Egenskab</label>
+            <select id="filter-feature-3">
+              <option value="">Vælg egenskab...</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-row-secondary">
+          <label class="filter-checkbox">
+            <input type="checkbox" id="filter-only-price">
+            Kun med pris
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" id="filter-only-area">
+            Kun med m²
+          </label>
+          <button class="btn btn-sm btn-outline" id="filter-reset">Nulstil filtre</button>
+        </div>
+      </div>
+
+      <div class="results-header">
+        <div class="result-count" id="result-count">Viser <strong>0</strong> boliger</div>
+        <select class="sort-select" id="sort-select">
+          <option value="newest">Nyeste først</option>
+          <option value="oldest">Ældste først</option>
+          <option value="price-asc">Pris — lav til høj</option>
+          <option value="price-desc">Pris — høj til lav</option>
+          <option value="area-asc">Størrelse — lav til høj</option>
+          <option value="area-desc">Størrelse — høj til lav</option>
+        </select>
+      </div>
+
+      <div class="listing-grid" id="listing-grid"></div>
+
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Forside</a>
+        <a href="listings.html">Boliger</a>
+        <a href="map.html">Kort</a>
+      </div>
+      <div class="footer-disclaimer">
+        BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.
+      </div>
+    </div>
+  </footer>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+      App.setupListingsPage();
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thyrasgade 4, 4. — BoligGram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">BG</span>
+        BoligGram
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="detail-container">
+    <a href="../listings.html" class="detail-back">&#8592; Tilbage til oversigt</a>
+
+    <div class="detail-ig-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVdX4hojNNH/" data-instgrm-version="14" style="width:100%; max-width:658px; margin:0 auto;">
+        <a href="https://www.instagram.com/p/DVdX4hojNNH/" target="_blank" rel="noopener">Se opslaget på Instagram</a>
+      </blockquote>
+    </div>
+
+    <div class="detail-header">
+      <div class="detail-price">3.645.000 kr.</div>
+      <div class="detail-address">Thyrasgade 4, 4.</div>
+      <div class="detail-neighborhood">2200 København N — Nørrebro</div>
+    </div>
+
+    <div class="detail-stats">
+      <div class="detail-stat">
+        <div class="detail-stat-value">50 m²</div>
+        <div class="detail-stat-label">Størrelse</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">1</div>
+        <div class="detail-stat-label">Rum</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">Ejerlejlighed</div>
+        <div class="detail-stat-label">Boligtype</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value">til salg</div>
+        <div class="detail-stat-label">Status</div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Beskrivelse</h2>
+      <div class="detail-caption">NYHED! Thyrasgade 4, 4. 508.🏡
+
+Lys og rummelig lejlighed med stor altan og hyggeligt kig ✨
+
+Boligen byder på en rummelig entré med plads til overtøj og sko samt et stort og funktionelt badeværelse med separat toilet og bruseniche. Lejlighedens hjerte er det åbne køkken-alrum og stue med god plads til både spiseområde, sofa og dobbeltseng. Herfra er der direkte udgang til en stor, hyggelig altan, der giver et skønt lysindfald i boligen. Køkkenet er et originalt snedkerkøkken med god skabsplads og opvaskemaskine. 
+
+Pris: 3.645.000 kr.
+50 m² bolig
+1 værelse
+Byggeår: 1974
+Energimærke C
+
+Kontakt os</div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Detaljer</h2>
+      <div class="detail-info-grid">
+        <div class="detail-info-item"><span class="label">Adresse</span><span class="value">Thyrasgade 4, 4.</span></div>
+        <div class="detail-info-item"><span class="label">Postnr. / By</span><span class="value">2200 København N</span></div>
+        <div class="detail-info-item"><span class="label">Område</span><span class="value">Nørrebro</span></div>
+        <div class="detail-info-item"><span class="label">Boligtype</span><span class="value">Ejerlejlighed</span></div>
+        <div class="detail-info-item"><span class="label">Rum</span><span class="value">1</span></div>
+        <div class="detail-info-item"><span class="label">Pris</span><span class="value">3.645.000 kr.</span></div>
+        <div class="detail-info-item"><span class="label">Størrelse</span><span class="value">50 m²</span></div>
+        <div class="detail-info-item"><span class="label">Energimærke</span><span class="value">C</span></div>
+        <div class="detail-info-item"><span class="label">Byggeår</span><span class="value">1974</span></div>
+        
+      </div>
+    </div>
+
+    <div class="detail-section"><h2>Egenskaber</h2><div class="detail-features"><span class="feature-tag">Altan</span><span class="feature-tag">Nyere køkken</span><span class="feature-tag">Åben planløsning</span><span class="feature-tag">Lysindfald</span><span class="feature-tag">Opvaskemaskine</span><span class="feature-tag">Vaskemaskine</span></div></div>
+
+    <div class="detail-section">
+      <h2>Placering</h2>
+      <div id="detail-map" style="height:280px;border-radius:var(--radius-md);overflow:hidden;margin-bottom:8px;"></div>
+      
+    </div>
+
+    <div class="detail-section">
+      <h2>Mægler</h2>
+      <div class="detail-broker-card">
+        <div class="broker-avatar">DN</div>
+        <div class="broker-info">
+          <h3>Danbolig Nørrebro</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-actions">
+      <a href="https://www.instagram.com/p/DVdX4hojNNH/" target="_blank" rel="noopener" class="btn btn-primary">Se opslaget på Instagram</a>
+      <a href="https://danbolig.dk/ejendomsmaegler/norrebro/" target="_blank" rel="noopener" class="btn btn-outline">Se hos mægler</a>
+    </div>
+
+    <div class="detail-source">
+      <strong>Kilde:</strong> Instagram-konto <a href="https://www.instagram.com/danbolignoerrebro/" target="_blank" rel="noopener">@danbolignoerrebro</a>.
+      Boligdata fra mæglerens hjemmeside.
+    </div>
+
+    <div class="related-section">
+      <h2 class="section-title">Andre boliger fra Danbolig Nørrebro</h2>
+      <div class="listing-grid" id="related-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BoligGram</div>
+        <p class="footer-text">Boliger til salg fundet via Instagram-mæglere i København.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Forside</a>
+        <a href="../listings.html">Boliger</a>
+        <a href="../map.html">Kort</a>
+      </div>
+      <div class="footer-disclaimer">BoligGram er ikke tilknyttet nogen ejendomsmæglerkæde eller Instagram. Verificér altid oplysninger direkte hos mægleren.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="../assets/app.js"></script>
+  <script>
+    (async () => {
+      await App.init();
+      const related = App.listings.filter(l => l.listing_id !== 'danbolig-009' && l.source_account_handle === 'danbolignoerrebro').slice(0, 3);
+      const grid = document.getElementById('related-grid');
+      if (grid) grid.innerHTML = related.map(l => App.renderCard(l)).join('');
+      App.loadInstagramEmbed();
+      setTimeout(() => App.reprocessEmbeds(), 1000);
+      
+      const mapEl = document.getElementById('detail-map');
+      if (mapEl) {
+        const m = L.map('detail-map', {zoomControl: true, scrollWheelZoom: false}).setView([55.697675, 12.546089], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>',
+          maxZoom: 19,
+        }).addTo(m);
+        L.marker([55.697675, 12.546089]).addTo(m);
+      }
+      
+    })();
+  </script>
+
+</body>
+</html>
