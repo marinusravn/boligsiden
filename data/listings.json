@@ -3115,53 +3115,172 @@
     "source_account_url": "https://www.instagram.com/ivaneltoftnielsen/",
     "instagram_post_url": "https://www.instagram.com/reel/DQJ4PuLj70S/",
     "instagram_shortcode": "DQJ4PuLj70S",
-    "post_date": "2025-01-01",
-    "post_caption_raw": "Bolig til salg via Ivan Eltoft Nielsen - en af Københavns mest anerkendte ejendomsmæglere med 24 filialer på Sjælland. Se Instagram-reel for detaljer om denne bolig.",
-    "address_raw": "København (se Instagram-opslag for præcis adresse)",
-    "street_name": "",
-    "house_number": "",
-    "floor_or_unit": "",
-    "postal_code": "",
-    "city": "København",
+    "post_date": "2025-01-15",
+    "post_caption_raw": "MAN SKAL VÆRE FORSIGTIG MED SIT HJERTE ...\n\nMan skal altid være forsigtig med sit hjerte, man kan nemt blive skuffet. Men her i Bornholmerkvarteret i Indre By kan man godt give slip, for kvarteret er nok det fornemmeste og mest besjælede af alle kvarterer i København. Lejligheden oppe på 3. sal er på 133 m2, og som en af de få lejligheder i Indre By går elevatoren lige til døren. Ja, kald på den fra en knap i lejlighedens entré. Her er dørtelefon og tænk, skab ud til trappeopgangen til mælk fra mælkemanden. Sådan var det i 1930erne, i dag en fredet nostalgi. Her er 2 balkoner, den ene med udsigt til Churchillparken, den anden til gården. Alt er velholdt, alt er lækkert, alt er lige til at flytte ind i.\n\n📍Hammerensgade 8, 3. tv, 1267 København K\n\nBoligareal: 133 m2\nVærelser: 4\nEjerudgift: 8.571 DKK\nPris: 12.500.000 DKK\n\nKontakt | Phillip Siesbye | 20 20 77 88",
+    "address_raw": "Hammerensgade 8, 3. tv, 1267 København K",
+    "street_name": "Hammerensgade",
+    "house_number": "8",
+    "floor_or_unit": "3. tv",
+    "postal_code": "1267",
+    "city": "København K",
     "neighborhood": "Indre By",
     "property_type": "apartment",
     "ownership_type": "ejerlejlighed",
-    "rooms": null,
+    "rooms": 4,
     "bedrooms": null,
-    "approximate_area_sqm": null,
+    "approximate_area_sqm": 133,
     "area_confidence": null,
-    "price_dkk": null,
+    "price_dkk": 12500000,
     "price_confidence": null,
-    "balcony": null,
-    "elevator": null,
+    "balcony": true,
+    "elevator": true,
     "outdoor_space": null,
     "energy_label": null,
     "brokerage_name": "Ivan Eltoft Nielsen",
-    "broker_name": "Ivan Eltoft Nielsen",
-    "contact_phone": null,
-    "contact_email": null,
+    "broker_name": "Phillip Siesbye",
+    "contact_phone": "20 20 77 88",
+    "contact_email": "siesbye@eltoftnielsen.dk",
     "listing_status": "active",
     "open_house_date": null,
     "primary_image_url": null,
     "additional_image_urls": [],
-    "caption_evidence": "Instagram reel fra @ivaneltoftnielsen - Ejendomsmæglerfirma Ivan Eltoft Nielsen ApS",
-    "extraction_confidence": 0.5,
-    "manual_review_required": true,
-    "notes": "Tilføjet manuelt via Instagram embed. Se reel for detaljer.",
-    "latitude": 55.6761,
-    "longitude": 12.5683,
-    "geo_confidence": "area",
-    "price_display": "Se opslag",
-    "area_m2": null,
-    "monthly_cost": null,
-    "features": [],
+    "caption_evidence": "Hammerensgade 8, 3. tv, 1267 København K - 133 m2, 4 vær., 12.500.000 DKK",
+    "extraction_confidence": 0.95,
+    "manual_review_required": false,
+    "notes": "Tilføjet manuelt fra Instagram reel. Fuld tinglysningsdata tilgængelig.",
+    "latitude": 55.688476,
+    "longitude": 12.591311,
+    "geo_confidence": "exact",
+    "price_display": "12.500.000 kr.",
+    "area_m2": 133,
+    "monthly_cost": 8571,
+    "features": [
+      "Elevator til døren",
+      "2 balkoner",
+      "Udsigt til Churchillparken",
+      "Dørtelefon",
+      "Velholdt",
+      "Fredet nostalgi",
+      "Bornholmerkvarteret"
+    ],
     "rating": {
-      "overall_score": 0,
-      "criteria": []
+      "overall_score": 3.8,
+      "criteria": [
+        {
+          "key": "price",
+          "label": "Prisvurdering",
+          "description": "Kvadratmeterpris vs. områdets gennemsnit",
+          "score": 3.0,
+          "detail": "93.985 kr/m² vs. gns. 85.000 kr/m² i Indre By",
+          "weight": 0.3
+        },
+        {
+          "key": "area",
+          "label": "Størrelse",
+          "description": "133 m² er over gennemsnittet for Indre By",
+          "score": 4.5,
+          "detail": "133 m² - rummelig lejlighed",
+          "weight": 0.2
+        },
+        {
+          "key": "location",
+          "label": "Beliggenhed",
+          "description": "Bornholmerkvarteret, tæt på Churchillparken",
+          "score": 4.5,
+          "detail": "Topbeliggenhed i Indre By med udsigt til park",
+          "weight": 0.3
+        },
+        {
+          "key": "condition",
+          "label": "Stand",
+          "description": "Velholdt og indflytningsklar",
+          "score": 4.0,
+          "detail": "Beskrevet som velholdt og lækkert",
+          "weight": 0.2
+        }
+      ]
     },
     "luxury": {
-      "luxury_score": 0,
-      "criteria": []
+      "luxury_score": 4.2,
+      "luxury_label": "Liebhaver",
+      "criteria": [
+        {
+          "key": "elevator",
+          "label": "Privat elevator",
+          "description": "Elevator direkte til lejligheden",
+          "score": 5.0,
+          "weight": 0.25
+        },
+        {
+          "key": "balcony",
+          "label": "Dobbelt balkon",
+          "description": "2 balkoner med udsigt til Churchillparken og gård",
+          "score": 4.5,
+          "weight": 0.2
+        },
+        {
+          "key": "location",
+          "label": "Beliggenhed",
+          "description": "Bornholmerkvarteret - Indre Bys fornemmeste",
+          "score": 4.5,
+          "weight": 0.3
+        },
+        {
+          "key": "character",
+          "label": "Karakter",
+          "description": "Fredet nostalgi, dørtelefon, historisk charme",
+          "score": 3.5,
+          "weight": 0.25
+        }
+      ]
+    },
+    "tinglysning": {
+      "owners": [
+        {
+          "name": "Anders Erik Brenøe",
+          "share": "1/1"
+        }
+      ],
+      "property_type_tl": "Ejerlejlighed",
+      "matrikel": "895",
+      "landsejerlav": "Østervold Kvarter, København",
+      "property_value_dkk": 7373000,
+      "land_value_dkk": 5045000,
+      "valuation_date": "2020-01-01",
+      "municipality": "Københavns Kommune",
+      "mortgages": [
+        {
+          "type": "Andet pantebrev",
+          "principal": "20.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Ejerforeningen Grønningen 7-9"
+          ],
+          "date": "30.07.1996"
+        },
+        {
+          "type": "Ejerpantebrev",
+          "principal": "11.000 DKK",
+          "interest_rate": "",
+          "interest_type": "",
+          "creditors": [
+            "Anders Erik Brenøe"
+          ],
+          "date": "13.10.1999"
+        },
+        {
+          "type": "Realkreditpantebrev",
+          "principal": "5.764.000 DKK",
+          "interest_rate": "2.228",
+          "interest_type": "variabel",
+          "creditors": [
+            "REALKREDIT DANMARK A/S"
+          ],
+          "date": "22.01.2026"
+        }
+      ],
+      "total_debt_dkk": 5795000
     }
   }
 ]
